@@ -162,7 +162,7 @@
   }
   
   .video-image {
-    width: 110%;
+    width: 150%;
     display: block;
   }
   
@@ -518,6 +518,7 @@
       height: 0;
     }
   }
+
 
 
 
