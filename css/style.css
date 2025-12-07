@@ -461,7 +461,8 @@
 
   .modal-content {
     position: relative;
-    background: #111;
+    background: #fff;
+    color: #000;
     border-radius: 10px;
     max-width: 800px;
     width: 100%;
@@ -487,7 +488,7 @@
     right: 12px;
     background: transparent;
     border: none;
-    color: #fff;
+    color: #000;
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -518,6 +519,7 @@
       height: 0;
     }
   }
+
 
 
 
