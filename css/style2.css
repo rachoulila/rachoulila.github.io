@@ -1,0 +1,549 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  background: #333;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  background: #444;
+}
+
+/* PAGE CONTAINER */
+.page-container {
+  width: 80%;
+  margin: 30px auto;
+}
+
+/* MAIN TITLE */
+.main-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* BLABLA BAR */
+.subtitle-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+/* SECTIONS */
+.pollution-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.section-left {
+  width: 35%;
+}
+
+.section-right {
+  width: 60%;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.section-right p {
+  margin-bottom: 14px;
+}
+
+/* IMAGES */
+.section-image-wrapper {
+  margin-top: 14px;
+  max-width: 350px;
+}
+
+.section-image {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.section-image-caption {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  color: #444;
+}
+
+/* NOTES */
+.section-footnote {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* BOUTONS GÉNÉRIQUES */
+.test-btn-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.test-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.test-btn[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.test-btn-enabled {
+  opacity: 1;
+}
+
+/* =======================================
+   JEU DE CLASSEMENT (autre page)
+======================================= */
+
+.pollution-game {
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.game-title {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.game-subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.game-list {
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+}
+
+.game-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  background: #f8f8f8;
+  cursor: grab;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.game-item:last-child {
+  border-bottom: none;
+}
+
+.game-item.dragging {
+  opacity: 0.6;
+}
+
+.game-item.correct {
+  background: #d7f5df;
+  border-color: #3aa96b;
+}
+
+.game-item.wrong {
+  background: #f9d5d5;
+  border-color: #d64545;
+}
+
+.game-check-btn {
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.game-check-btn:hover {
+  background: #222;
+}
+
+.game-note {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.game-feedback {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+/* =====================================================
+   PAGE DE CONCLUSION
+===================================================== */
+
+.conclusion-body {
+  background: #fff;
+  color: #000;
+}
+
+.conclusion-main {
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 0 40px;
+}
+
+.conclusion-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.conclusion-text p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 14px;
+}
+
+.conclusion-subtitle {
+  text-align: center !important;
+  font-weight: 600;
+  margin: 24px 0 18px;
+}
+
+.conclusion-footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CLICKER D'ARBRES (autre page)
+========================================================= */
+
+.next-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.tree-clicker {
+  max-width: 350px;
+}
+
+.plant-btn {
+  padding: 8px 18px;
+  background: #2f7d32;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.plant-btn:hover {
+  background: #396f3a;
+}
+
+.plant-info {
+  font-size: 0.85rem;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.forest {
+  min-height: 40px;
+  border: 1px dashed #bbb;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.tree-emoji {
+  margin-right: 4px;
+}
+
+/* =========================================================
+   MINI JEU PUB (autre page)
+========================================================= */
+
+.pub-game {
+  margin: 40px 0 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.pub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pub-title {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.pub-message {
+  font-size: 1.1rem;
+  min-height: 1.2em;
+}
+
+.pub-message.success {
+  color: #2e8b57;
+}
+
+.pub-message.error {
+  color: #c62828;
+}
+
+.pub-intro {
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.pub-stats {
+  display: flex;
+  gap: 24px;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.pub-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.pub-option {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #f9f9f9;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-option.selected {
+  background: #e6eefc;
+  border-color: #3b7dd8;
+}
+
+.pub-option h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.pub-btn {
+  margin-top: auto;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.pub-btn:hover:not(:disabled) {
+  background: #222;
+}
+
+.pub-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pub-btn-chosen {
+  background: #3b7dd8;
+}
+
+.pub-note {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  color: #555;
+}
+
+/* RESPONSIVE GÉNÉRAL */
+@media (max-width: 900px) {
+  .page-container {
+    width: 90%;
+  }
+
+  .pollution-section {
+    flex-direction: column;
+  }
+
+  .pub-stats {
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   MINI JEU IA — 8 IMAGES QUI DÉFILENT
+========================================================= */
+
+.ai-quiz {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.ai-quiz-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.ai-quiz-intro {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.ai-quiz-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.ai-quiz-progress {
+  font-weight: 500;
+}
+
+.ai-quiz-score {
+  font-weight: 600;
+}
+
+/* Zone image + boutons */
+.ai-quiz-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.ai-quiz-image-wrapper {
+  flex: 0 0 260px;
+  max-width: 260px;
+}
+
+#ai-current-image {
+  width: 100%;
+  height: 180px;       /* Taille A */
+  object-fit: cover;   /* ou "contain" si tu ne veux pas de crop */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Zone boutons + feedback */
+.ai-quiz-controls {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Conteneur des boutons : CENTRÉ */
+.ai-quiz-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;      /* ➜ centre les boutons */
+}
+
+/* Boutons IA / Réelle : PLUS PETITS + CENTRÉS */
+.ai-quiz-btn {
+  width: 200px;             /* ➜ plus petit */
+  padding: 6px 10px;        /* ➜ plus fin */
+  border-radius: 4px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;        /* ➜ légèrement réduit */
+  text-align: center;       /* ➜ texte centré */
+}
+
+.ai-quiz-btn:hover:not(:disabled) {
+  background: #222;
+}
+
+
+.ai-quiz-btn:hover:not(:disabled) {
+  background: #222;
+}
+
+.ai-quiz-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Feedback sous les boutons */
+.ai-feedback {
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.ai-feedback.success {
+  color: #2e8b57;
+}
+
+.ai-feedback.error {
+  color: #c62828;
+}
+
+/* Message final */
+.ai-final-message {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Responsive mini-jeu IA */
+@media (max-width: 700px) {
+  .ai-quiz-main {
+    flex-direction: column;
+  }
+
+  .ai-quiz-image-wrapper {
+    max-width: 100%;
+  }
+
+  #ai-current-image {
+    height: 200px;
+  }
+}
