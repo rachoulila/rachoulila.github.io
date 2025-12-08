@@ -373,6 +373,12 @@
     margin-bottom: 0px;
   }
 
+.section-footnote {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
   .page3-figure {
     flex: 4;
     display: flex;
@@ -520,6 +526,7 @@
       height: 0;
     }
   }
+
 
 
 
