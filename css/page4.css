@@ -71,6 +71,12 @@ body {
   margin-bottom: 16px;
 }
 
+.section-footnote {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
 /* -----------------------------------
    LAYOUT PRINCIPAL
 ----------------------------------- */
@@ -208,3 +214,4 @@ body {
     justify-content: center;
   }
 }
+
