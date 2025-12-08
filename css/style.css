@@ -321,9 +321,9 @@
   ------------------------------------ */
 
   .page3-body {
-    background: white;
+    background: white !important;
     min-height: 100vh;
-    color: black;
+    color: black !important;
     /* padding: 40px 60px; */
   }
 
@@ -520,6 +520,7 @@
       height: 0;
     }
   }
+
 
 
 
