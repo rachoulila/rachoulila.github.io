@@ -347,7 +347,7 @@
   .page3-layout {
     display: flex;
     gap: 40px;
-    align-items: flex-end; /* bas du texte aligné avec bas de l'image */
+    align-items: flex-start; /* bas du texte aligné avec bas de l'image */
   }
 
   .page3-content {
@@ -520,6 +520,7 @@
       height: 0;
     }
   }
+
 
 
 
