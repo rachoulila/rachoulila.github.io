@@ -370,7 +370,7 @@
   .page3-cta-title {
     font-weight: 600;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
   .page3-figure {
@@ -380,10 +380,10 @@
   }
 
   .page3-figure-img {
-    max-width: 75%;
+    max-width: 72%;
     height: auto;
     background: #fff;
-    padding: 8px;
+    padding: 0px;
   }
 
   /* Ligne logos + bouton continuer (sous le texte + image) */
@@ -520,6 +520,7 @@
       height: 0;
     }
   }
+
 
 
 
