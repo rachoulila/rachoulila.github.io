@@ -351,7 +351,7 @@
   }
 
   .page3-content {
-    flex: 7;
+    flex: 6;
     font-size: 0.90rem;
     line-height: 1.7;
   }
@@ -369,12 +369,12 @@
 
   .page3-cta-title {
     font-weight: 600;
-    margin-top: 26px;
+    margin-top: 0px;
     margin-bottom: 10px;
   }
 
   .page3-figure {
-    flex: 2;
+    flex: 3;
     display: flex;
     justify-content: flex-end;
   }
@@ -520,6 +520,7 @@
       height: 0;
     }
   }
+
 
 
 
