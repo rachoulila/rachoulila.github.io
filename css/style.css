@@ -340,7 +340,7 @@
 
   .page3-subtitle {
     font-size: 0.98rem;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
 
   /* Texte + image alignés par le bas */
@@ -364,7 +364,7 @@
   .page3-section-title {
     font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 
   .page3-cta-title {
@@ -520,6 +520,7 @@
       height: 0;
     }
   }
+
 
 
 
