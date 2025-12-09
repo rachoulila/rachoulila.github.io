@@ -117,7 +117,6 @@
         card.addEventListener('click', () => {
           const isCorrect = card.dataset.correct === 'true';
 
-          // On enlève d'abord les anciennes couleurs éventuelles de cette carte
           card.classList.remove('quiz-correct', 'quiz-wrong');
 
           if (isCorrect) {
@@ -131,6 +130,7 @@
   </script>
 </body>
 </html>
+
 
 
 
