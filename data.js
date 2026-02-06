@@ -580,8 +580,8 @@ window.PORTFOLIO_DATA = {
               description: "En charge de la communication pour le Court-métrage Summer & Zima. Logo, posts réseaux, affiche, Merch, générique... Projeté dans divers cinéma.",
               bullets: ["Livrable 1", "Livrable 2"],
               images: {
-                big: "assets/images/summor-01.jpg",
-                wide: "assets/images/summor-02.jpg",
+                big: "assets/images/sez/A3_OPTIMAL.jpg",
+                wide: "assets/images/sez/IMG_5885.jpeg",
               },
               cta: null,
             },
