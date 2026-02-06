@@ -139,6 +139,7 @@ window.PORTFOLIO_DATA = {
             },
         
             Planétarium: {
+              hidden: true,   // ← projet non prêt
               title: "Planétarium",
               meta: "Estienne — 2025–2027",
               description: "Projection au planétarium de Paris et de Berlin. All made on Touch Designer",
@@ -153,6 +154,7 @@ window.PORTFOLIO_DATA = {
             },
         
             "Mission Matilda": {
+              hidden: true,   // ← projet non prêt
               title: "Mission Matilda",
               meta: "Estienne — 2025–2027",
               description: "Décris Mission Matilda ici.",
@@ -164,6 +166,7 @@ window.PORTFOLIO_DATA = {
             },
         
             Anome: {
+              hidden: true,   // ← projet non prêt
               title: "Anome",
               meta: "Estienne — 2025–2027",
               description: "Décris Anome ici.",
@@ -175,6 +178,7 @@ window.PORTFOLIO_DATA = {
             },
         
             "Poster-gouter": {
+              hidden: true,   // ← projet non prêt
               title: "Poster-gouter",
               meta: "Estienne — 2025–2027",
               description: "Décris Poster-gouter ici.",
@@ -186,6 +190,7 @@ window.PORTFOLIO_DATA = {
             },
         
             Antipathie: {
+              hidden: true,   // ← projet non prêt
               title: "Antipathie",
               meta: "Estienne — 2025–2027",
               description: "Décris Antipathie ici.",
@@ -197,6 +202,7 @@ window.PORTFOLIO_DATA = {
             },
         
             "Plein écran / air": {
+              hidden: true,   // ← projet non prêt
               title: "Plein écran / air",
               meta: "Estienne — 2025–2027",
               description: "Décris Plein écran / air ici.",
@@ -235,6 +241,7 @@ window.PORTFOLIO_DATA = {
 
           projects: {
             Diplôme: {
+              hidden: true,   // ← projet non prêt
               title: "Sexposer",
               meta: "Estienne — 2025–2027",
               description:
@@ -250,6 +257,7 @@ window.PORTFOLIO_DATA = {
             },
 
             Pulsar: {
+              hidden: true,   // ← projet non prêt
               title: "Pulsar : master thesis",
               meta: "Estienne — 2025–2027",
               description:
@@ -266,6 +274,7 @@ window.PORTFOLIO_DATA = {
             },
 
             Planétarium: {
+              hidden: true,   // ← projet non prêt
               title: "Planétarium",
               meta: "Estienne — 2025–2027",
               description:
@@ -355,6 +364,7 @@ window.PORTFOLIO_DATA = {
 
           projects: {
             Naming: {
+              hidden: true,   // ← projet non prêt
               title: "Naming",
               meta: "Rëva — Studio",
               description: "Texte Naming : mission, process, etc.",
@@ -366,6 +376,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             Rebranding: {
+              hidden: true,   // ← projet non prêt
               title: "Rebranding",
               meta: "Rëva — Studio",
               description: "Texte Rebranding : système graphique, etc.",
@@ -377,6 +388,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             "Modulo Home": {
+              hidden: true,   // ← projet non prêt
               title: "Modulo Home",
               meta: "Rëva — Studio",
               description: "Texte Modulo Home : contexte, rôle, etc.",
@@ -390,6 +402,7 @@ window.PORTFOLIO_DATA = {
           },
 
           detailFallback: {
+            hidden: true,   // ← projet non prêt
             title: "Rëva",
             meta: "Brand / Design",
             description: "Description générale de l’expérience (fallback).",
@@ -410,6 +423,7 @@ window.PORTFOLIO_DATA = {
 
           projects: {
             "Longueur d’ondes": {
+              hidden: true,   // ← projet non prêt
               title: "Longueur d’ondes",
               meta: "Polygone — Agence",
               description: "Texte projet Longueur d’ondes.",
@@ -421,6 +435,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             Branding: {
+              hidden: true,   // ← projet non prêt
               title: "Branding",
               meta: "Polygone — Agence",
               description: "Texte Branding : concept, direction artistique, etc.",
@@ -473,6 +488,7 @@ window.PORTFOLIO_DATA = {
 
           projects: {
             "Longueur d’ondes": {
+              hidden: true,   // ← projet non prêt
               title: "Longueur d’ondes",
               meta: "Polygone — Agence",
               description: "Texte projet Longueur d’ondes.",
@@ -484,6 +500,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             Branding: {
+              hidden: true,   // ← projet non prêt
               title: "Branding",
               meta: "Polygone — Agence",
               description: "Texte Branding : concept, direction artistique, etc.",
@@ -517,6 +534,7 @@ window.PORTFOLIO_DATA = {
 
           projects: {
             "2023": {
+              hidden: true,   // ← projet non prêt
               title: "2023",
               meta: "Collectif 31",
               description: "Texte projet Longueur d’ondes.",
@@ -528,6 +546,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             "2024": {
+              hidden: true,   // ← projet non prêt
               title: "2024",
               meta: "Collectif 31",
               description: "Texte Branding : concept, direction artistique, etc.",
@@ -566,6 +585,7 @@ window.PORTFOLIO_DATA = {
 
           projects: {
             "Summor et Zimo": {
+              hidden: true,   // ← projet non prêt
               title: "Summor et Zimo",
               meta: "Cinéma — Freelance",
               description: "Texte Summor et Zimo : affiche, générique, etc.",
@@ -577,6 +597,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             Anatomie: {
+              hidden: true,   // ← projet non prêt
               title: "Anatomie",
               meta: "Cinéma — Freelance",
               description: "Texte Anatomie : contexte, intention, etc.",
@@ -610,6 +631,7 @@ window.PORTFOLIO_DATA = {
 
           projects: {
             Hazymmetry: {
+              hidden: true,   // ← projet non prêt
               title: "Hazymmetry",
               meta: "Musique — Freelance",
               description: "Texte Hazymmetry.",
@@ -621,6 +643,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             "BB Carnage": {
+              hidden: true,   // ← projet non prêt
               title: "BB Carnage",
               meta: "Musique — Freelance",
               description: "Texte BB Carnage.",
@@ -632,6 +655,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             "jsp": {
+              hidden: true,   // ← projet non prêt
               title: "jsp",
               meta: "Musique — Freelance",
               description: "Texte Soup A2A.",
@@ -643,6 +667,7 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             Ethereal: {
+              hidden: true,   // ← projet non prêt
               title: "Ethereal",
               meta: "Musique — Freelance",
               description: "Texte Ethereal.",
