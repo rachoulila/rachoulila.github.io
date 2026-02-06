@@ -98,7 +98,7 @@ window.PORTFOLIO_DATA = {
             "DSAA Design de création numérique (2025–2027)",
             "→ Diplôme",
             "→ Pulsar",
-            "→ Planétarium",
+            "→ Morph",
             "→ Mission Matilda",
             "→ Anome",
             "→ Poster-gouter",
@@ -137,11 +137,10 @@ window.PORTFOLIO_DATA = {
               },
             },
         
-            Planétarium: {
-              hidden: true,   // ← projet non prêt
-              title: "Planétarium",
+            Morph: {
+              title: "Morph",
               meta: "Estienne — 2025–2027",
-              description: "Projection au planétarium de Paris et de Berlin. All made on Touch Designer",
+              description: "Réalisation d’images 3D et générative. Projection au planétarium de Paris et de Berlin. Partenariat avec l’université UDK de Berlin et les étudiants en Sound Design.",
               images: {
                 big: "assets/images/plane/planatorium-01.jpg",
                 wide: "assets/images/plane/planatorium-02.jpg",
@@ -153,10 +152,9 @@ window.PORTFOLIO_DATA = {
             },
         
             "Mission Matilda": {
-              hidden: true,   // ← projet non prêt
               title: "Mission Matilda",
               meta: "Estienne — 2025–2027",
-              description: "Décris Mission Matilda ici.",
+              description: "Jeu exploratoire conçu pour faire découvrir le portrait d’une chercheuse en astrophysique. Des objets manipulables sérigraphiés révèlent des indices menant à une expérience sur le web. Exposé à Ground Control pour le festival Double Science et lors de divers événements. Projet réalisé en duo. Conception graphique, développement, écriture et scénographie.",
               images: {
                 big: "assets/images/matilda/matilda-01.jpg",
                 wide: "assets/images/matilda/matilda-02.jpg",
@@ -177,10 +175,9 @@ window.PORTFOLIO_DATA = {
             },
         
             "Poster-gouter": {
-              hidden: true,   // ← projet non prêt
               title: "Poster-gouter",
               meta: "Estienne — 2025–2027",
-              description: "Décris Poster-gouter ici.",
+              description: "Poster interactif (éléments manipulables utilisés pour la médiation). Représentation graphique du travail du chercheur Landry Bretheau en Physique Quantique. Projet « Poster Gouter » en collaboration avec l’École du Non-Savoir (Présentation au Théatre de La Ville). Travail en équipe. Conception graphique et médiation.",
               images: {
                 big: "assets/images/poster-gouter/poster-gouter-01.jpg",
                 wide: "assets/images/poster-gouter/poster-gouter-02.jpg",
@@ -233,18 +230,17 @@ window.PORTFOLIO_DATA = {
           sublines: [
             "DN MADE Graphisme (2025–2027)",
             "→ Sexposer",
-            "→ Pulsar",
-            "→ Planétarium",
+            "→ JPO",
+            "→ Autoportrait",
           ],
           metaRight: "2025–2027",
 
           projects: {
             Diplôme: {
-              hidden: true,   // ← projet non prêt
               title: "Sexposer",
               meta: "Estienne — 2025–2027",
               description:
-                "11:11 est une exposition qui montre le shifting.",
+                "Mémoire et projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
               images: {
                 big: "assets/images/diplome/diplome-01.jpeg",
                 wide: "assets/images/diplome-02.jpeg",
@@ -255,12 +251,11 @@ window.PORTFOLIO_DATA = {
               },
             },
 
-            Pulsar: {
-              hidden: true,   // ← projet non prêt
-              title: "Pulsar : master thesis",
+            JPO: {
+              title: "JPO",
               meta: "Estienne — 2025–2027",
               description:
-                "Pulsar : plongé en soonocène digicore",
+                "Identité visuelle des Journées Portes ouvertes des écoles Boulle, Dupérré, Ensaama et Estienne. Projet Lauréat. Affiche animée, formats réseaux sociaux et print.",
               bullets: ["Axe 1", "Axe 2"],
               images: {
                 big: "assets/images/pulsar/thesis-01.jpg",
@@ -272,12 +267,12 @@ window.PORTFOLIO_DATA = {
               },
             },
 
-            Planétarium: {
+            Autoportrait: {
               hidden: true,   // ← projet non prêt
-              title: "Planétarium",
+              title: "Autoportrait",
               meta: "Estienne — 2025–2027",
               description:
-                "Projection au planétarium de Paris et de Berlin. All made on Touch Designer",
+                "Autoportraits musicaux",
               images: {
                 big: "assets/images/plane/planatorium-01.jpg",
                 wide: "assets/images/plane/planatorium-02.jpg",
@@ -308,9 +303,6 @@ window.PORTFOLIO_DATA = {
           label: "Fransisco de Vitoria, Madrid",
           sublines: [
             "Semestre d'échange, 2022",
-            "→ Diplôme",
-            "→ Pulsar",
-            "→ Planétarium",
           ],
           metaRight: "2025–2027",
 
@@ -499,10 +491,9 @@ window.PORTFOLIO_DATA = {
               cta: null,
             },
             Branding: {
-              hidden: true,   // ← projet non prêt
               title: "Branding",
               meta: "Polygone — Agence",
-              description: "Texte Branding : concept, direction artistique, etc.",
+              description: "Identité visuelle de l’association Le Polygone. Direction artistique et réalisation de Merch lors d’évênements.",
               bullets: ["Système", "Assets", "Déclinaisons"],
               images: {
                 big: "assets/images/branding-01.jpg",
@@ -579,15 +570,14 @@ window.PORTFOLIO_DATA = {
         {
           id: "free-cinema",
           label: "Cinéma",
-          sublines: ["→ Summor et Zimo", "→ Anatomie"],
+          sublines: ["→ Summer et Zima", "→ Anatomie"],
           metaRight: "Freelance",
 
           projects: {
-            "Summor et Zimo": {
-              hidden: true,   // ← projet non prêt
-              title: "Summor et Zimo",
+            "Summer et Zima": {
+              title: "Summer et Zima",
               meta: "Cinéma — Freelance",
-              description: "Texte Summor et Zimo : affiche, générique, etc.",
+              description: "En charge de la communication pour le Court-métrage Summer & Zima. Logo, posts réseaux, affiche, Merch, générique... Projeté dans divers cinéma.",
               bullets: ["Livrable 1", "Livrable 2"],
               images: {
                 big: "assets/images/summor-01.jpg",
