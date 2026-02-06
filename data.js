@@ -114,7 +114,7 @@ window.PORTFOLIO_DATA = {
               description: "11:11 est une exposition qui montre le shifting.",
               images: {
                 big: "assets/images/diplome/diplome-01.jpeg",
-                wide: "assets/images/diplome-02.jpeg",
+                wide: "assets/images/diplome/image_4.jpeg",
               },
               cta: {
                 label: "En savoir plus",
