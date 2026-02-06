@@ -142,8 +142,8 @@ window.PORTFOLIO_DATA = {
               meta: "Estienne — 2025–2027",
               description: "Réalisation d’images 3D et générative. Projection au planétarium de Paris et de Berlin. Partenariat avec l’université UDK de Berlin et les étudiants en Sound Design.",
               images: {
-                big: "assets/images/plane/planatorium-01.jpg",
-                wide: "assets/images/plane/planatorium-02.jpg",
+                big: "assets/images/plane/portal.jpg",
+                wide: "assets/images/plane/projection.jpg",
               },
               cta: {
                 label: "Watch here",
