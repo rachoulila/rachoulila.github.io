@@ -125,7 +125,7 @@ window.PORTFOLIO_DATA = {
             Pulsar: {
               title: "Pulsar : master thesis",
               meta: "Estienne — 2025–2027",
-              description: "Pulsar : plongée en sonocène digicore",
+              description: "Pulsar : plongée en sonocène digicore. Mémoire de DSAA. Analyses des expériences musicales adressées à des individus hyper connectés. Écriture et conception graphique.",
               bullets: ["Axe 1", "Axe 2"],
               images: {
                 big: "assets/images/pulsar/thesis-01.jpg",
