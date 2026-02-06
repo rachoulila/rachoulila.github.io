@@ -17,7 +17,7 @@ window.PORTFOLIO_DATA = {
     instagramHref: "https://instagram.com/rachel.truchot",
 
     about:
-      "Bio courte : ton parcours, ta direction artistique, tes intérêts, etc. (2–6 lignes, simple).",
+      "Hi ! I'm Rachel, a hybrid digital designer and strategist.",
 
     heroImages: Array.from({ length: 10 }, (_, i) => {
       const n = String(i + 1).padStart(2, "0");
