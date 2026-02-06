@@ -28,6 +28,11 @@ function normalizeArrowLabel(line) {
   return String(line || "").replace(/^→\s*/u, "").trim();
 }
 
+function isProjectHidden(item, projectKey) {
+  const p = item?.projects?.[projectKey];
+  return !!(p && p.hidden);
+}
+
 /* ---------- Start at top (avoid landing on #experiences after refresh) ---------- */
 function forceTopOnLoad() {
   if (window.location.hash) {
@@ -162,14 +167,14 @@ function renderDetail(root, detail) {
   const cta = detail.cta || null;
 
   const ctaHtml =
-  cta && cta.href
-    ? `<a class="projectLinkButton"
-         href="${escapeHtml(cta.href)}"
-         target="_blank"
-         rel="noopener noreferrer">
-         ${escapeHtml(cta.label || "Consulter ici")}
-       </a>`
-    : "";
+    cta && cta.href
+      ? `<a class="projectLinkButton"
+           href="${escapeHtml(cta.href)}"
+           target="_blank"
+           rel="noopener noreferrer">
+           ${escapeHtml(cta.label || "Consulter ici")}
+         </a>`
+      : "";
 
   root.innerHTML = `
     <header class="detail__header">
@@ -219,7 +224,44 @@ function renderList(sectionKey, sectionData) {
   const items = sectionData.items || [];
   if (!items.length) return;
 
+  function getFirstVisibleArrowIndex(item) {
+    const sublines = item?.sublines || [];
+    for (let i = 0; i < sublines.length; i++) {
+      const line = sublines[i];
+      if (!isArrowLine(line)) continue;
+      const key = normalizeArrowLabel(line);
+      if (!isProjectHidden(item, key)) return i;
+    }
+    // fallback: first arrow even if hidden, else 0
+    const anyArrow = sublines.findIndex((l) => isArrowLine(l));
+    return anyArrow >= 0 ? anyArrow : 0;
+  }
+
+  function findNextVisibleArrowIndex(item, startIndex = 0) {
+    const sublines = item?.sublines || [];
+    for (let i = startIndex; i < sublines.length; i++) {
+      const line = sublines[i];
+      if (!isArrowLine(line)) continue;
+      const key = normalizeArrowLabel(line);
+      if (!isProjectHidden(item, key)) return i;
+    }
+    // try from beginning
+    return getFirstVisibleArrowIndex(item);
+  }
+
   function setActive(itemId, subIndex) {
+    const item = items.find((x) => x.id === itemId) || items[0];
+    const sublines = item?.sublines || [];
+
+    // If user clicked a hidden project (or index points to hidden), jump to next visible
+    const chosenLine = sublines[subIndex] ?? "";
+    if (isArrowLine(chosenLine)) {
+      const key = normalizeArrowLabel(chosenLine);
+      if (isProjectHidden(item, key)) {
+        subIndex = findNextVisibleArrowIndex(item, Number(subIndex) + 1);
+      }
+    }
+
     // active style only on arrow links
     listRoot.querySelectorAll(".list__subLink").forEach((node) => {
       const sameItem = node.dataset.itemId === String(itemId);
@@ -228,20 +270,21 @@ function renderList(sectionKey, sectionData) {
       node.setAttribute("aria-current", sameItem && sameSub ? "true" : "false");
     });
 
-    const item = items.find((x) => x.id === itemId) || items[0];
-    const sublines = item.sublines || [];
-
     const chosen =
       sublines[subIndex] ??
+      sublines.find((l) => isArrowLine(l) && !isProjectHidden(item, normalizeArrowLabel(l))) ??
       sublines.find((l) => isArrowLine(l)) ??
       sublines[0] ??
       "";
 
     const projectKey = normalizeArrowLabel(chosen);
 
-    // ✅ project-specific detail
+    // project-specific detail (and skip hidden)
     const projectDetail =
-      (item.projects && item.projects[projectKey]) ||
+      (item.projects &&
+        item.projects[projectKey] &&
+        !item.projects[projectKey].hidden &&
+        item.projects[projectKey]) ||
       item.detailFallback ||
       null;
 
@@ -265,6 +308,12 @@ function renderList(sectionKey, sectionData) {
         sub.appendChild(plain);
         return;
       }
+
+      const projectKey = normalizeArrowLabel(line);
+      const project = item?.projects?.[projectKey];
+
+      // ✅ if project exists and is marked hidden, don't show it in the list
+      if (project && project.hidden) return;
 
       // clickable but looks like text
       const link = document.createElement("span");
@@ -293,13 +342,11 @@ function renderList(sectionKey, sectionData) {
     listRoot.appendChild(block);
   });
 
-  // default selection: first item, first arrow line (or 0)
+  // default selection: first item, first *visible* arrow line (or 0)
   const firstItem = items[0];
-  const firstSublines = firstItem?.sublines || [];
-  let firstArrowIndex = firstSublines.findIndex((l) => isArrowLine(l));
-  if (firstArrowIndex < 0) firstArrowIndex = 0;
+  const firstIndex = getFirstVisibleArrowIndex(firstItem);
 
-  setActive(firstItem.id, firstArrowIndex);
+  setActive(firstItem.id, firstIndex);
 }
 
 function mountSections() {
