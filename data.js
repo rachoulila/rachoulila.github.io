@@ -156,8 +156,8 @@ window.PORTFOLIO_DATA = {
               meta: "Estienne — 2025–2027",
               description: "Jeu exploratoire conçu pour faire découvrir le portrait d’une chercheuse en astrophysique. Des objets manipulables sérigraphiés révèlent des indices menant à une expérience sur le web. Exposé à Ground Control pour le festival Double Science et lors de divers événements. Projet réalisé en duo. Conception graphique, développement, écriture et scénographie.",
               images: {
-                big: "assets/images/matilda/matilda-01.jpg",
-                wide: "assets/images/matilda/matilda-02.jpg",
+                big: "assets/images/matilda/mission_matilda-rachel_flore-3.jpg",
+                wide: "assets/images/matilda/2500-1663-max.jpg",
               },
               cta: null,
             },
@@ -179,8 +179,8 @@ window.PORTFOLIO_DATA = {
               meta: "Estienne — 2025–2027",
               description: "Poster interactif (éléments manipulables utilisés pour la médiation). Représentation graphique du travail du chercheur Landry Bretheau en Physique Quantique. Projet « Poster Gouter » en collaboration avec l’École du Non-Savoir (Présentation au Théatre de La Ville). Travail en équipe. Conception graphique et médiation.",
               images: {
-                big: "assets/images/poster-gouter/poster-gouter-01.jpg",
-                wide: "assets/images/poster-gouter/poster-gouter-02.jpg",
+                big: "assets/images/postergouter/DSC_0979f-2.jpg",
+                wide: "assets/images/postergouter/DSC_1017f.jpg",
               },
               cta: null,
             },
@@ -242,8 +242,8 @@ window.PORTFOLIO_DATA = {
               description:
                 "Mémoire et projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
               images: {
-                big: "assets/images/diplome/diplome-01.jpeg",
-                wide: "assets/images/diplome-02.jpeg",
+                big: "assets/images/sexpo1/Test.jpg",
+                wide: "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png",
               },
               cta: {
                 label: "en savoir plus",
@@ -258,8 +258,8 @@ window.PORTFOLIO_DATA = {
                 "Identité visuelle des Journées Portes ouvertes des écoles Boulle, Dupérré, Ensaama et Estienne. Projet Lauréat. Affiche animée, formats réseaux sociaux et print.",
               bullets: ["Axe 1", "Axe 2"],
               images: {
-                big: "assets/images/pulsar/thesis-01.jpg",
-                wide: "assets/images/pulsar/thesis-02.jpg",
+                big: "assets/images/JPO/JPO2022_Bannière.jpg",
+                wide: "assets/images/pulsar/JPO/F81DDB39-55A0-42E1-A0C9-41BE91A0B8F4.JPG",
               },
               cta: {
                 label: "Lire ici",
@@ -455,7 +455,7 @@ window.PORTFOLIO_DATA = {
         {
           id: "exp-australie.gad",
           label: "Australie.GAD",
-          sublines: ["Description", "→ Longueur d’ondes", "→ Branding"],
+          sublines: ["Description"],
           metaRight: "Agence",
 
           detailFallback: {
@@ -496,8 +496,8 @@ window.PORTFOLIO_DATA = {
               description: "Identité visuelle de l’association Le Polygone. Direction artistique et réalisation de Merch lors d’évênements.",
               bullets: ["Système", "Assets", "Déclinaisons"],
               images: {
-                big: "assets/images/branding-01.jpg",
-                wide: "assets/images/branding-02.jpg",
+                big: "assets/images/polygone.1/STUD NEW LED-34.jpg",
+                wide: "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg",
               },
               cta: null,
             },
@@ -615,7 +615,7 @@ window.PORTFOLIO_DATA = {
         {
           id: "free-musique",
           label: "Musique",
-          sublines: ["→ Hazymmetry", "→ BB Carnage", "→ Soup A2A", "→ Ethereal"],
+          sublines: ["→ Hazymmetry", "→ BB Carnage", "→ jsp", "→ Ethereal"],
           metaRight: "Freelance",
 
           projects: {
