@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Porn Washing – Page 4</title>
+  <link rel="stylesheet" href="css/page4.css">
+</head>
+<body class="page4-body">
+
+  <!-- BARRE DU HAUT -->
+  <header class="page4-topbar">
+    <div class="page4-topbar-left">
+      Rachel Truchot - <span class="page4-topbar-project">Porn washing</span>
+    </div>
+    <a href="page3.html" class="page4-back-btn">Revenir en arrière</a>
+  </header>
+
+  <div class="page4-container">
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="page4-main">
+
+      <!-- COLONNE GAUCHE -->
+      <section class="page4-left">
+        <h1 class="page4-title">Contexte</h1>
+
+        <div class="page4-main-image-wrapper">
+          <img
+            src="img/img.intro3.png"
+            alt="Visuel de la campagne Pornhub"
+            class="page4-main-image"
+          >
+        </div>
+      </section>
+
+      <!-- COLONNE DROITE -->
+      <section class="page4-right">
+
+        <p class="page4-text">
+          <br/>
+          La collaboration de ces deux acteurs, <i>The Dirtiest Porn Ever</i> (« le film porno le plus sale de tous les temps ») prend la forme d'une vidéo tournée sur « la plage la plus polluée du monde » (localisation tue), avec la promesse de dons proportionnels aux vues (montant tu). Dans la publicité, on voit le célèbre couple Léo Lulu prêt à passer à l’action sur une plage jonchée de déchets. Autour d’eux, des gens en combinaisons floquées <i>Pornhub</i> ramassent des déchets. Le nettoyage révèle peu à peu le couple initialement caché sous les détritus, et l’océan revient à son bleu naturel.
+        </p>
+
+        <p class="page4-text">
+          En plus de la vidéo, la page du site dédiée à la campagne propose des informations sur les problèmes liés au plastique à usage unique et des conseils pour des pratiques plus durables. Le site met en avant 3 mesures : acheter le moins de plastique possible, recycler tous les plastiques à usage unique, nettoyer derrière soi lorsqu’on profite des espaces naturels. La page encourage aussi d’autres acteurs et amateurs à tourner des scènes similaires.
+        </p>
+
+        <p class="page4-text">
+        Habituée des campagnes de communication grandiloquentes, et hébergeant de nombreuses vidéos non-pornographiques sur son site, l’entreprise n’en est pas à son coup d’essai écologique.
+          </p>
+
+        <p class="page4-text page4-highlight">
+          Mais saurez-vous deviner quelles autres initiatives écologiques Pornhub a soutenu ?
+        </p>
+
+        <!-- GRILLE DE QUIZZ -->
+        <div class="page4-quiz-grid">
+
+          <div class="quiz-card" data-correct="true">
+            <img src="img/reforestation.jpg" alt="Reforestation" class="quiz-image">
+            <div class="quiz-label">La reforestation</div>
+          </div>
+
+          <div class="quiz-card" data-correct="true">
+            <img src="img/beesexual.jpg" alt="Abeilles" class="quiz-image">
+            <div class="quiz-label">La protection des abeilles</div>
+          </div>
+
+          <div class="quiz-card" data-correct="false">
+            <img src="img/iceberg.jpg" alt="Fonte des glaces" class="quiz-image">
+            <div class="quiz-label">La sensibilisation à la fonte des glaces</div>
+          </div>
+
+          <div class="quiz-card" data-correct="true">
+            <img src="img/panda.avif" alt="Pandas" class="quiz-image">
+            <div class="quiz-label">La protection des pandas</div>
+          </div>
+
+          <div class="quiz-card" data-correct="true">
+            <img src="img/baleine.jpg" alt="Baleines" class="quiz-image">
+            <div class="quiz-label">La protection des baleines</div>
+          </div>
+
+          <div class="quiz-card" data-correct="falsa">
+            <img src="img/datacenter.jpg" alt="Data centers" class="quiz-image">
+            <div class="quiz-label">Dénoncer la consommation des datas center dont ils dépendent</div>
+          </div>
+
+        </div>
+
+        <p class="page4-text">
+          L’entreprise a également commercialisé un « wankband », bracelet connecté qui génère de l’électricité par les mouvements du poignet lorsque ce dernier va de bas en haut. L’objectif est de générer de l’énergie renouvelable afin de recharger un smartphone ou tout objet connecté en manque de batterie.
+        </p>
+
+        <p class="page4-text">
+          Toutes ces initiatives s’inscrivent dans leur branche philanthropique <i>Pornhub Cares</i>. Leur credo RSE est toujours le même. « Vous voulez sauver la planète ? Matez du porno. »<sup>1</sup> titrait un article du magazine ADN sur le sujet. Mais qui gagne vraiment à cette augmentation des vues ? Et qui y perd ?
+        </p>
+
+        <p class="section-footnote">
+          <sup>1</sup> Margaux Dussert, « Greenwashing : l’industrie du X peut-elle vraiment se mettre au vert ? », l’ADN, 2019.
+        </p>
+
+        <div class="page4-continue-wrapper">
+          <a href="page5.html" class="page4-continue-btn">Continuer</a>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- JS : logiques du quiz -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cards = document.querySelectorAll('.quiz-card');
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          const isCorrect = card.dataset.correct === 'true';
+
+          card.classList.remove('quiz-correct', 'quiz-wrong');
+
+          if (isCorrect) {
+            card.classList.add('quiz-correct');
+          } else {
+            card.classList.add('quiz-wrong');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
