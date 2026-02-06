@@ -133,7 +133,7 @@ window.PORTFOLIO_DATA = {
               },
               cta: {
                 label: "Lire ici",
-                href: "assets/pulsar_web.pdf",
+                href: "assets/pulsar_web_compressed.pdf",
               },
             },
         
