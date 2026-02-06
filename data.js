@@ -36,7 +36,6 @@ window.PORTFOLIO_DATA = {
             "Master Communication, médias et industries créatives (2025–2027)",
             "→ Vitality",
             "→ Pornwashing",
-            "→ Radar",
           ],
           metaRight: "2025–2027",
 
