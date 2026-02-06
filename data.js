@@ -1,6 +1,6 @@
 // data.js
 // Chaque projet (les lignes "→ ...") a maintenant son propre contenu complet.
-// Images: mets-les dans /assets/images/ (ou ailleurs si tu veux)
+// Images: mets-les dans /assets/images/ (ou ailleurs). Tu peux maintenant en mettre 1, 2, 3, ...
 
 window.PORTFOLIO_DATA = {
   site: {
@@ -46,10 +46,7 @@ window.PORTFOLIO_DATA = {
               meta: "Sciences Po — 2025–2027",
               description:
                 "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
-              images: {
-                big: "assets/images/vitality/vitality-01.jpg",
-                wide: "assets/images/vitality/vitality-02.jpg",
-              },
+              images: ["assets/images/vitality/vitality-01.jpg", "assets/images/vitality/vitality-02.jpg"],
     
               // optionnel
               cta: {
@@ -63,10 +60,7 @@ window.PORTFOLIO_DATA = {
               meta: "Sciences Po — 2025–2027",
               description:
                 "Étude de cas sousla forme d'un site internet, analyse de la campagne dirtiest porn ever de Pornhub.",
-              images: {
-                big: "assets/images/pornwashing/pornwashing-01.jpg",
-                wide: "assets/images/pornwashing/pornwashing-02.jpg",
-              },
+              images: ["assets/images/pornwashing/pornwashing-01.jpg", "assets/images/pornwashing/pornwashing-02.jpg"],
               // ✅ bouton
               cta: {
                 label: "Consulter ici",
@@ -83,10 +77,7 @@ window.PORTFOLIO_DATA = {
             description:
               "Description générale du programme (fallback si besoin).",
             bullets: [],
-            images: {
-              big: "assets/images/edu-01.jpg",
-              wide: "assets/images/edu-02.jpg",
-            },
+            images: ["assets/images/edu-01.jpg", "assets/images/edu-02.jpg"],
             cta: null,
           },
         },
@@ -112,10 +103,7 @@ window.PORTFOLIO_DATA = {
               title: "11:11 - Projet de diplôme",
               meta: "Estienne — 2025–2027",
               description: "11:11 est une exposition qui montre le shifting.",
-              images: {
-                big: "assets/images/diplome/diplome-01.jpeg",
-                wide: "assets/images/diplome/image_4.jpeg",
-              },
+              images: ["assets/images/diplome/diplome-01.jpeg", "assets/images/diplome/image_4.jpeg"],
               cta: {
                 label: "En savoir plus",
                 href: "??",
@@ -127,10 +115,7 @@ window.PORTFOLIO_DATA = {
               meta: "Estienne — 2025–2027",
               description: "Pulsar : plongée en sonocène digicore. Mémoire de DSAA. Analyses des expériences musicales adressées à des individus hyper connectés. Écriture et conception graphique.",
               bullets: ["Axe 1", "Axe 2"],
-              images: {
-                big: "assets/images/pulsar/thesis-01.jpg",
-                wide: "assets/images/pulsar/thesis-02.jpg",
-              },
+              images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
               cta: {
                 label: "Lire ici",
                 href: "assets/pulsar_web_compressed.pdf",
@@ -141,10 +126,7 @@ window.PORTFOLIO_DATA = {
               title: "Morph",
               meta: "Estienne — 2025–2027",
               description: "Réalisation d’images 3D et générative. Projection au planétarium de Paris et de Berlin. Partenariat avec l’université UDK de Berlin et les étudiants en Sound Design.",
-              images: {
-                big: "assets/images/plane/portal.jpg",
-                wide: "assets/images/plane/projection.jpg",
-              },
+              images: ["assets/images/plane/portal.jpg", "assets/images/plane/projection.jpg"],
               cta: {
                 label: "Watch here",
                 href: "??",
@@ -155,10 +137,7 @@ window.PORTFOLIO_DATA = {
               title: "Mission Matilda",
               meta: "Estienne — 2025–2027",
               description: "Jeu exploratoire conçu pour faire découvrir le portrait d’une chercheuse en astrophysique. Des objets manipulables sérigraphiés révèlent des indices menant à une expérience sur le web. Exposé à Ground Control pour le festival Double Science et lors de divers événements. Projet réalisé en duo. Conception graphique, développement, écriture et scénographie.",
-              images: {
-                big: "assets/images/matilda/mission_matilda-rachel_flore-3.jpg",
-                wide: "assets/images/matilda/2500-1663-max.jpg",
-              },
+              images: ["assets/images/matilda/mission_matilda-rachel_flore-3.jpg", "assets/images/matilda/2500-1663-max.jpg"],
               cta: null,
             },
         
@@ -167,10 +146,7 @@ window.PORTFOLIO_DATA = {
               title: "Anome",
               meta: "Estienne — 2025–2027",
               description: "Décris Anome ici.",
-              images: {
-                big: "assets/images/anome/anome-01.jpg",
-                wide: "assets/images/anome/anome-02.jpg",
-              },
+              images: ["assets/images/anome/anome-01.jpg", "assets/images/anome/anome-02.jpg"],
               cta: null,
             },
         
@@ -178,10 +154,7 @@ window.PORTFOLIO_DATA = {
               title: "Poster-gouter",
               meta: "Estienne — 2025–2027",
               description: "Poster interactif (éléments manipulables utilisés pour la médiation). Représentation graphique du travail du chercheur Landry Bretheau en Physique Quantique. Projet « Poster Gouter » en collaboration avec l’École du Non-Savoir (Présentation au Théatre de La Ville). Travail en équipe. Conception graphique et médiation.",
-              images: {
-                big: "assets/images/postergouter/DSC_0979f-2.jpg",
-                wide: "assets/images/postergouter/DSC_1017f.jpg",
-              },
+              images: ["assets/images/postergouter/DSC_0979f-2.jpg", "assets/images/postergouter/DSC_1017f.jpg"],
               cta: null,
             },
         
@@ -190,10 +163,7 @@ window.PORTFOLIO_DATA = {
               title: "Antipathie",
               meta: "Estienne — 2025–2027",
               description: "Décris Antipathie ici.",
-              images: {
-                big: "assets/images/antipathie/antipathie-01.jpg",
-                wide: "assets/images/antipathie/antipathie-02.jpg",
-              },
+              images: ["assets/images/antipathie/antipathie-01.jpg", "assets/images/antipathie/antipathie-02.jpg"],
               cta: null,
             },
         
@@ -202,10 +172,7 @@ window.PORTFOLIO_DATA = {
               title: "Plein écran / air",
               meta: "Estienne — 2025–2027",
               description: "Décris Plein écran / air ici.",
-              images: {
-                big: "assets/images/plein-ecran/plein-ecran-01.jpg",
-                wide: "assets/images/plein-ecran/plein-ecran-02.jpg",
-              },
+              images: ["assets/images/plein-ecran/plein-ecran-01.jpg", "assets/images/plein-ecran/plein-ecran-02.jpg"],
               cta: null,
             },
           },
@@ -215,10 +182,7 @@ window.PORTFOLIO_DATA = {
             meta: "DSAA — 2025–2027",
             description: "Description générale Estienne (fallback si besoin).",
             bullets: [],
-            images: {
-              big: "assets/images/edu-03.jpg",
-              wide: "assets/images/edu-04.jpg",
-            },
+            images: ["assets/images/edu-03.jpg", "assets/images/edu-04.jpg"],
             cta: null,
           },
         },
@@ -241,10 +205,7 @@ window.PORTFOLIO_DATA = {
               meta: "Estienne — 2025–2027",
               description:
                 "Mémoire et projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
-              images: {
-                big: "assets/images/sexpo1/Test.jpg",
-                wide: "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png",
-              },
+              images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
               cta: {
                 label: "en savoir plus",
                 href: "??",
@@ -257,10 +218,7 @@ window.PORTFOLIO_DATA = {
               description:
                 "Identité visuelle des Journées Portes ouvertes des écoles Boulle, Dupérré, Ensaama et Estienne. Projet Lauréat. Affiche animée, formats réseaux sociaux et print.",
               bullets: ["Axe 1", "Axe 2"],
-              images: {
-                big: "assets/images/JPO/JPO2022_Bannière.jpg",
-                wide: "assets/images/pulsar/JPO/F81DDB39-55A0-42E1-A0C9-41BE91A0B8F4.JPG",
-              },
+              images: ["assets/images/JPO/JPO2022_Bannière.jpg", "assets/images/pulsar/JPO/F81DDB39-55A0-42E1-A0C9-41BE91A0B8F4.JPG"],
               cta: {
                 label: "Lire ici",
                 href: "assets/pulsar_web.pdf",
@@ -273,10 +231,7 @@ window.PORTFOLIO_DATA = {
               meta: "Estienne — 2025–2027",
               description:
                 "Autoportraits musicaux",
-              images: {
-                big: "assets/images/plane/planatorium-01.jpg",
-                wide: "assets/images/plane/planatorium-02.jpg",
-              },
+              images: ["assets/images/plane/planatorium-01.jpg", "assets/images/plane/planatorium-02.jpg"],
               cta: {
                 label: "Watch here",
                 href: "??",
@@ -290,10 +245,7 @@ window.PORTFOLIO_DATA = {
             description:
               "Description générale Estienne (fallback si besoin).",
             bullets: [],
-            images: {
-              big: "assets/images/edu-03.jpg",
-              wide: "assets/images/edu-04.jpg",
-            },
+            images: ["assets/images/edu-03.jpg", "assets/images/edu-04.jpg"],
             cta: null,
           },
         },
@@ -312,10 +264,7 @@ window.PORTFOLIO_DATA = {
             description:
               "Description générale Estienne (fallback si besoin).",
             bullets: [],
-            images: {
-              big: "assets/images/edu-03.jpg",
-              wide: "assets/images/edu-04.jpg",
-            },
+            images: ["assets/images/edu-03.jpg", "assets/images/edu-04.jpg"],
             cta: null,
           },
         },
@@ -334,10 +283,7 @@ window.PORTFOLIO_DATA = {
             description:
               "Description générale Estienne (fallback si besoin).",
             bullets: [],
-            images: {
-              big: "assets/images/edu-03.jpg",
-              wide: "assets/images/edu-04.jpg",
-            },
+            images: ["assets/images/edu-03.jpg", "assets/images/edu-04.jpg"],
             cta: null,
           },
         },
@@ -360,10 +306,7 @@ window.PORTFOLIO_DATA = {
               meta: "Rëva — Studio",
               description: "Texte Naming : mission, process, etc.",
               bullets: ["Option 1", "Option 2"],
-              images: {
-                big: "assets/images/naming-01.jpg",
-                wide: "assets/images/naming-02.jpg",
-              },
+              images: ["assets/images/naming-01.jpg", "assets/images/naming-02.jpg"],
               cta: null,
             },
             Rebranding: {
@@ -372,10 +315,7 @@ window.PORTFOLIO_DATA = {
               meta: "Rëva — Studio",
               description: "Texte Rebranding : système graphique, etc.",
               bullets: ["Logo", "Système", "Guidelines"],
-              images: {
-                big: "assets/images/rebranding-01.jpg",
-                wide: "assets/images/rebranding-02.jpg",
-              },
+              images: ["assets/images/rebranding-01.jpg", "assets/images/rebranding-02.jpg"],
               cta: null,
             },
             "Modulo Home": {
@@ -384,10 +324,7 @@ window.PORTFOLIO_DATA = {
               meta: "Rëva — Studio",
               description: "Texte Modulo Home : contexte, rôle, etc.",
               bullets: ["Asset 1", "Asset 2"],
-              images: {
-                big: "assets/images/modulo-01.jpg",
-                wide: "assets/images/modulo-02.jpg",
-              },
+              images: ["assets/images/modulo-01.jpg", "assets/images/modulo-02.jpg"],
               cta: null,
             },
           },
@@ -398,10 +335,7 @@ window.PORTFOLIO_DATA = {
             meta: "Brand / Design",
             description: "Description générale de l’expérience (fallback).",
             bullets: [],
-            images: {
-              big: "assets/images/exp-01.jpg",
-              wide: "assets/images/exp-02.jpg",
-            },
+            images: ["assets/images/exp-01.jpg", "assets/images/exp-02.jpg"],
             cta: null,
           },
         },
@@ -419,10 +353,7 @@ window.PORTFOLIO_DATA = {
               meta: "Polygone — Agence",
               description: "Texte projet Longueur d’ondes.",
               bullets: ["Point 1", "Point 2"],
-              images: {
-                big: "assets/images/ondes-01.jpg",
-                wide: "assets/images/ondes-02.jpg",
-              },
+              images: ["assets/images/ondes-01.jpg", "assets/images/ondes-02.jpg"],
               cta: null,
             },
             Branding: {
@@ -431,10 +362,7 @@ window.PORTFOLIO_DATA = {
               meta: "Polygone — Agence",
               description: "Texte Branding : concept, direction artistique, etc.",
               bullets: ["Système", "Assets", "Déclinaisons"],
-              images: {
-                big: "assets/images/branding-01.jpg",
-                wide: "assets/images/branding-02.jpg",
-              },
+              images: ["assets/images/branding-01.jpg", "assets/images/branding-02.jpg"],
               cta: null,
             },
           },
@@ -444,10 +372,7 @@ window.PORTFOLIO_DATA = {
             meta: "Identité / Campagne",
             description: "Description générale Polygone (fallback).",
             bullets: [],
-            images: {
-              big: "assets/images/exp-03.jpg",
-              wide: "assets/images/exp-04.jpg",
-            },
+            images: ["assets/images/exp-03.jpg", "assets/images/exp-04.jpg"],
             cta: null,
           },
         },
@@ -463,10 +388,7 @@ window.PORTFOLIO_DATA = {
             meta: "Identité / Campagne",
             description: "Description générale Polygone (fallback).",
             bullets: [],
-            images: {
-              big: "assets/images/exp-03.jpg",
-              wide: "assets/images/exp-04.jpg",
-            },
+            images: ["assets/images/exp-03.jpg", "assets/images/exp-04.jpg"],
             cta: null,
           },
         },
@@ -484,10 +406,7 @@ window.PORTFOLIO_DATA = {
               meta: "Polygone — Agence",
               description: "Texte projet Longueur d’ondes.",
               bullets: ["Point 1", "Point 2"],
-              images: {
-                big: "assets/images/ondes-01.jpg",
-                wide: "assets/images/ondes-02.jpg",
-              },
+              images: ["assets/images/ondes-01.jpg", "assets/images/ondes-02.jpg"],
               cta: null,
             },
             Branding: {
@@ -495,10 +414,7 @@ window.PORTFOLIO_DATA = {
               meta: "Polygone — Agence",
               description: "Identité visuelle de l’association Le Polygone. Direction artistique et réalisation de Merch lors d’évênements.",
               bullets: ["Système", "Assets", "Déclinaisons"],
-              images: {
-                big: "assets/images/polygone.1/STUD NEW LED-34.jpg",
-                wide: "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg",
-              },
+              images: ["assets/images/polygone.1/STUD NEW LED-34.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
               cta: null,
             },
           },
@@ -508,10 +424,7 @@ window.PORTFOLIO_DATA = {
             meta: "Identité / Campagne",
             description: "Description générale Polygone (fallback).",
             bullets: [],
-            images: {
-              big: "assets/images/exp-03.jpg",
-              wide: "assets/images/exp-04.jpg",
-            },
+            images: ["assets/images/exp-03.jpg", "assets/images/exp-04.jpg"],
             cta: null,
           },
         },
@@ -529,10 +442,7 @@ window.PORTFOLIO_DATA = {
               meta: "Collectif 31",
               description: "Texte projet Longueur d’ondes.",
               bullets: ["Point 1", "Point 2"],
-              images: {
-                big: "assets/images/ondes-01.jpg",
-                wide: "assets/images/ondes-02.jpg",
-              },
+              images: ["assets/images/ondes-01.jpg", "assets/images/ondes-02.jpg"],
               cta: null,
             },
             "2024": {
@@ -541,10 +451,7 @@ window.PORTFOLIO_DATA = {
               meta: "Collectif 31",
               description: "Texte Branding : concept, direction artistique, etc.",
               bullets: ["Système", "Assets", "Déclinaisons"],
-              images: {
-                big: "assets/images/branding-01.jpg",
-                wide: "assets/images/branding-02.jpg",
-              },
+              images: ["assets/images/branding-01.jpg", "assets/images/branding-02.jpg"],
               cta: null,
             },
           },
@@ -554,10 +461,7 @@ window.PORTFOLIO_DATA = {
             meta: "Identité / Campagne",
             description: "Description générale Polygone (fallback).",
             bullets: [],
-            images: {
-              big: "assets/images/exp-03.jpg",
-              wide: "assets/images/exp-04.jpg",
-            },
+            images: ["assets/images/exp-03.jpg", "assets/images/exp-04.jpg"],
             cta: null,
           },
         },
@@ -579,10 +483,7 @@ window.PORTFOLIO_DATA = {
               meta: "Cinéma — Freelance",
               description: "En charge de la communication pour le Court-métrage Summer & Zima. Logo, posts réseaux, affiche, Merch, générique... Projeté dans divers cinéma.",
               bullets: ["Livrable 1", "Livrable 2"],
-              images: {
-                big: "assets/images/sez/A3_OPTIMAL.jpg",
-                wide: "assets/images/sez/IMG_5885.jpeg",
-              },
+              images: ["assets/images/sez/A3_OPTIMAL.jpg", "assets/images/sez/IMG_5885.jpeg"],
               cta: null,
             },
             Anatomie: {
@@ -591,10 +492,7 @@ window.PORTFOLIO_DATA = {
               meta: "Cinéma — Freelance",
               description: "Texte Anatomie : contexte, intention, etc.",
               bullets: ["Livrable 1", "Livrable 2"],
-              images: {
-                big: "assets/images/anatomie-01.jpg",
-                wide: "assets/images/anatomie-02.jpg",
-              },
+              images: ["assets/images/anatomie-01.jpg", "assets/images/anatomie-02.jpg"],
               cta: null,
             },
           },
@@ -604,10 +502,7 @@ window.PORTFOLIO_DATA = {
             meta: "Freelance",
             description: "Description générale Cinéma (fallback).",
             bullets: [],
-            images: {
-              big: "assets/images/free-01.jpg",
-              wide: "assets/images/free-02.jpg",
-            },
+            images: ["assets/images/free-01.jpg", "assets/images/free-02.jpg"],
             cta: null,
           },
         },
@@ -625,10 +520,7 @@ window.PORTFOLIO_DATA = {
               meta: "Musique — Freelance",
               description: "Texte Hazymmetry.",
               bullets: ["Cover", "Assets promo"],
-              images: {
-                big: "assets/images/hazy-01.jpg",
-                wide: "assets/images/hazy-02.jpg",
-              },
+              images: ["assets/images/hazy-01.jpg", "assets/images/hazy-02.jpg"],
               cta: null,
             },
             "BB Carnage": {
@@ -637,10 +529,7 @@ window.PORTFOLIO_DATA = {
               meta: "Musique — Freelance",
               description: "Texte BB Carnage.",
               bullets: ["Identité", "Déclinaisons"],
-              images: {
-                big: "assets/images/bb-01.jpg",
-                wide: "assets/images/bb-02.jpg",
-              },
+              images: ["assets/images/bb-01.jpg", "assets/images/bb-02.jpg"],
               cta: null,
             },
             "jsp": {
@@ -649,10 +538,7 @@ window.PORTFOLIO_DATA = {
               meta: "Musique — Freelance",
               description: "Texte Soup A2A.",
               bullets: ["Artwork", "Campagne"],
-              images: {
-                big: "assets/images/soup-01.jpg",
-                wide: "assets/images/soup-02.jpg",
-              },
+              images: ["assets/images/soup-01.jpg", "assets/images/soup-02.jpg"],
               cta: null,
             },
             Ethereal: {
@@ -661,10 +547,7 @@ window.PORTFOLIO_DATA = {
               meta: "Musique — Freelance",
               description: "Texte Ethereal.",
               bullets: ["Direction artistique", "Assets"],
-              images: {
-                big: "assets/images/ethereal-01.jpg",
-                wide: "assets/images/ethereal-02.jpg",
-              },
+              images: ["assets/images/ethereal-01.jpg", "assets/images/ethereal-02.jpg"],
               cta: null,
             },
           },
@@ -674,10 +557,7 @@ window.PORTFOLIO_DATA = {
             meta: "Visuels / DA",
             description: "Description générale Musique (fallback).",
             bullets: [],
-            images: {
-              big: "assets/images/free-03.jpg",
-              wide: "assets/images/free-04.jpg",
-            },
+            images: ["assets/images/free-03.jpg", "assets/images/free-04.jpg"],
             cta: null,
           },
         },

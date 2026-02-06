@@ -33,6 +33,25 @@ function isProjectHidden(item, projectKey) {
   return !!(p && p.hidden);
 }
 
+function prefersReducedMotion() {
+  return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function isSmallScreen() {
+  return window.matchMedia && window.matchMedia("(max-width: 980px)").matches;
+}
+
+function getStickyNavHeight() {
+  const nav = qs(".quicknav");
+  return nav ? nav.getBoundingClientRect().height : 0;
+}
+
+function scrollToElementWithOffset(targetEl, offset = 0) {
+  if (!targetEl) return;
+  const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top, left: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" });
+}
+
 /* ---------- Start at top (avoid landing on #experiences after refresh) ---------- */
 function forceTopOnLoad() {
   if (window.location.hash) {
@@ -144,15 +163,48 @@ function mountHeroSlideshow() {
   });
 
   function render() {
-    img.src = imgs[index];
+    // simple crossfade: swap with a class
+    img.classList.remove("is-visible");
+    const nextSrc = imgs[index];
     index = (index + 1) % imgs.length;
+
+    const tmp = new Image();
+    tmp.onload = () => {
+      img.src = nextSrc;
+      requestAnimationFrame(() => img.classList.add("is-visible"));
+    };
+    tmp.src = nextSrc;
   }
 
+  img.classList.add("is-visible");
   render();
   setInterval(render, 2600);
 }
 
 /* ---------- Detail rendering ---------- */
+function normalizeImages(images) {
+  if (!images) return [];
+  if (Array.isArray(images)) return images.filter(Boolean);
+
+  // Backward compat: { big, wide }
+  if (typeof images === "object") {
+    const arr = [];
+    if (images.big) arr.push(images.big);
+    if (images.wide) arr.push(images.wide);
+
+    // Optional: { items: [...] }
+    if (Array.isArray(images.items)) {
+      images.items.forEach((x) => {
+        if (typeof x === "string") arr.push(x);
+        else if (x?.src) arr.push(x.src);
+      });
+    }
+    return arr.filter(Boolean);
+  }
+
+  return [];
+}
+
 function renderDetail(root, detail) {
   if (!detail) {
     root.innerHTML = "";
@@ -163,7 +215,7 @@ function renderDetail(root, detail) {
   const meta = detail.meta || "";
   const description = detail.description || "";
   const bullets = Array.isArray(detail.bullets) ? detail.bullets : [];
-  const images = detail.images || {};
+  const images = normalizeImages(detail.images);
   const cta = detail.cta || null;
 
   const ctaHtml =
@@ -176,6 +228,19 @@ function renderDetail(root, detail) {
          </a>`
       : "";
 
+  const imgsHtml = images.length
+    ? `<div class="media__grid">
+        ${images
+          .map(
+            (src, i) =>
+              `<figure class="media__figure">
+                 <img class="media__img" src="${escapeHtml(src)}" alt="" loading="${i === 0 ? "eager" : "lazy"}" />
+               </figure>`
+          )
+          .join("")}
+      </div>`
+    : "";
+
   root.innerHTML = `
     <header class="detail__header">
       <h3 class="detail__title">${escapeHtml(title)}</h3>
@@ -184,16 +249,7 @@ function renderDetail(root, detail) {
 
     <div class="detail__content">
       <div class="media">
-        ${
-          images.big
-            ? `<img class="media__img media__img--big" src="${escapeHtml(images.big)}" alt="" />`
-            : ""
-        }
-        ${
-          images.wide
-            ? `<img class="media__img media__img--wide" src="${escapeHtml(images.wide)}" alt="" />`
-            : ""
-        }
+        ${imgsHtml}
       </div>
 
       <div class="textblock">
@@ -211,6 +267,13 @@ function renderDetail(root, detail) {
       </div>
     </div>
   `;
+
+  // animate on change
+  if (!prefersReducedMotion()) {
+    root.classList.remove("is-animating");
+    void root.offsetWidth; // force reflow
+    root.classList.add("is-animating");
+  }
 }
 
 /* ---------- Sections (left list -> right detail) ---------- */
@@ -249,7 +312,7 @@ function renderList(sectionKey, sectionData) {
     return getFirstVisibleArrowIndex(item);
   }
 
-  function setActive(itemId, subIndex) {
+  function setActive(itemId, subIndex, { scrollToMedia = false } = {}) {
     const item = items.find((x) => x.id === itemId) || items[0];
     const sublines = item?.sublines || [];
 
@@ -289,6 +352,13 @@ function renderList(sectionKey, sectionData) {
       null;
 
     renderDetail(detailRoot, projectDetail);
+
+    // ✅ Mobile UX: after click, bring the detail (images) into view
+    if (scrollToMedia && (isSmallScreen() || window.innerWidth < 980)) {
+      const media = detailRoot.querySelector(".media") || detailRoot;
+      const offset = getStickyNavHeight() + 14;
+      scrollToElementWithOffset(media, offset);
+    }
   }
 
   // Render items
@@ -327,11 +397,11 @@ function renderList(sectionKey, sectionData) {
       link.dataset.itemId = item.id;
       link.dataset.subIndex = String(idx);
 
-      link.addEventListener("click", () => setActive(item.id, idx));
+      link.addEventListener("click", () => setActive(item.id, idx, { scrollToMedia: true }));
       link.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          setActive(item.id, idx);
+          setActive(item.id, idx, { scrollToMedia: true });
         }
       });
 
@@ -346,7 +416,7 @@ function renderList(sectionKey, sectionData) {
   const firstItem = items[0];
   const firstIndex = getFirstVisibleArrowIndex(firstItem);
 
-  setActive(firstItem.id, firstIndex);
+  setActive(firstItem.id, firstIndex, { scrollToMedia: false });
 }
 
 function mountSections() {
