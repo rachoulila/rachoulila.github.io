@@ -1,125 +1,41 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio — Rachel Truchot</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body id="top">
-    <!-- HERO -->
-    <header class="hero" aria-label="Haut de page">
-      <div class="container hero__grid">
-        <!-- Slideshow -->
-        <section class="hero__mosaic" aria-label="Diaporama">
-          <div class="slideshow">
-            <img id="heroSlide" alt="Image du diaporama" />
-          </div>
-        </section>
-
-        <!-- Identity block -->
-        <aside class="hero__aside">
-          <div class="identity">
-            <div class="identity__name" id="siteName">RACHEL TRUCHOT</div>
-
-            <div class="identity__meta" id="siteRoles">
-              <div>GRAPHIC & DIGITAL DESIGNER</div>
-              <div>COMMUNICATION STRATEGIST</div>
-              <div>BASED IN PARIS</div>
-            </div>
-
-            <div class="identity__spacer"></div>
-
-            <div class="identity__label">CONTACT</div>
-            <a class="identity__link" id="siteEmail" href="mailto:rtruchot.ch">rtruchot.ch</a>
-          </div>
-        </aside>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rachel Truchot — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="left">
+      <div class="left__top">
+        <div class="left__name" id="siteName"></div>
+        <div class="left__role" id="siteRoles"></div>
       </div>
-    </header>
+      <nav class="menu" id="menu"></nav>
+    </aside>
 
-    <!-- Quick menu (STICKY when it reaches top) -->
-    <nav class="quicknav" aria-label="Navigation rapide">
-      <div class="container quicknav__inner">
-        <a class="quicknav__link" href="#education">EDUCATION</a>
-        <a class="quicknav__link" href="#experiences">EXPÉRIENCES</a>
-        <a class="quicknav__link" href="#freelance">FREELANCE</a>
-        <a class="quicknav__link" href="#about">ABOUT</a>
-      </div>
-    </nav>
-
-    <!-- MAIN -->
-    <main class="main">
-      <!-- EDUCATION -->
-      <section class="section" id="education" aria-label="Education">
-        <div class="container section__grid">
-          <aside class="section__left">
-            <h2 class="section__title">EDUCATION</h2>
-            <div class="list" id="list-education"></div>
-          </aside>
-
-          <div class="section__right">
-            <article class="detail" id="detail-education" aria-live="polite"></article>
-          </div>
-        </div>
-        <div class="container section__divider"></div>
-      </section>
-
-      <!-- EXPERIENCES -->
-      <section class="section" id="experiences" aria-label="Expériences">
-        <div class="container section__grid">
-          <aside class="section__left">
-            <h2 class="section__title">EXPÉRIENCES</h2>
-            <div class="list" id="list-experiences"></div>
-          </aside>
-
-          <div class="section__right">
-            <article class="detail" id="detail-experiences" aria-live="polite"></article>
-          </div>
-        </div>
-        <div class="container section__divider"></div>
-      </section>
-
-      <!-- FREELANCE -->
-      <section class="section" id="freelance" aria-label="Freelance">
-        <div class="container section__grid">
-          <aside class="section__left">
-            <h2 class="section__title">FREELANCE</h2>
-            <div class="list" id="list-freelance"></div>
-          </aside>
-
-          <div class="section__right">
-            <article class="detail" id="detail-freelance" aria-live="polite"></article>
-          </div>
-        </div>
-        <div class="container section__divider"></div>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="section section--about" id="about" aria-label="About">
-        <div class="container about">
-          <h2 class="section__title">ABOUT</h2>
-          <p class="about__text" id="aboutText">
-            Ajoute ici ta bio. Tu peux décrire ton approche, tes outils, tes envies, etc.
-          </p>
-        </div>
-      </section>
+    <main class="center" aria-label="Feed images">
+      <div class="gallery" id="gallery"></div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__left">
-          <div class="footer__title">CONTACT</div>
-          <a class="footer__link" id="footerEmail" href="mailto:r@truchot.ch">r@truchot.ch</a>
-        </div>
-        <div class="footer__right">
-          <a class="footer__link" href="#top">Retour en haut ↑</a>
-        </div>
+    <aside class="right" aria-label="Infos">
+      <div class="right__header">
+        <div class="right__title" id="infoTitle">—</div>
+        <div class="right__meta" id="infoMeta"></div>
       </div>
-    </footer>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-  </body>
+      <div class="right__desc" id="infoDesc"></div>
+      <div class="right__cta" id="infoCta"></div>
+
+      <div class="right__footer">
+        <a class="uLink" id="emailLink" href="#"></a>
+      </div>
+    </aside>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
