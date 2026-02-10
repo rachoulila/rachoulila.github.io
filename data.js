@@ -31,20 +31,20 @@ window.PORTFOLIO_V3 = {
     "S’exposer": {
       title: "S’exposer",
       meta: "",
-      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
-      images: [],
-      cta: {
-                label: "En savoir plus",
-                href: "https://www.canva.com/design/DAHAfP8VPU8/Gvn9IX475UdR3kV0i19IxQ/view?utm_content=DAHAfP8VPU8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h900cdb8bb7",
-              },
+      description: "Projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
+      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
+      cta: null,
       hidden: false
     },
     "La Ruche": {
       title: "La Ruche",
       meta: "",
-      description: "",
+      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
       images: ["assets/images/vitality/vitality-01.jpg", "assets/images/vitality/vitality-02.jpg"],
-      cta: null,
+      cta: {
+                label: "En savoir plus",
+                href: "https://www.canva.com/design/DAHAfP8VPU8/Gvn9IX475UdR3kV0i19IxQ/view?utm_content=DAHAfP8VPU8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h900cdb8bb7",
+              },
       hidden: false
     },
 
@@ -52,8 +52,8 @@ window.PORTFOLIO_V3 = {
     "Polygone": {
       title: "Polygone",
       meta: "",
-      description: "",
-      images: [],
+      description: "Identité visuelle de l’association Le Polygone. Direction artistique et réalisation de Merch lors d’évênements.",
+      images: ["assets/images/polygone.1/STUD NEW LED-34.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
       cta: null,
       hidden: false
     },
@@ -94,16 +94,16 @@ window.PORTFOLIO_V3 = {
     "Summer et Zima": {
       title: "Summer et Zima",
       meta: "",
-      description: "",
-      images: [],
+      description: "En charge de la communication pour le Court-métrage Summer & Zima. Logo, posts réseaux, affiche, Merch, générique... Projeté dans divers cinéma.",
+      images: ["assets/images/sez/A3_OPTIMAL.jpg", "assets/images/sez/IMG_5885.jpeg"],
       cta: null,
       hidden: false
     },
     "JPO": {
       title: "JPO",
       meta: "",
-      description: "",
-      images: [],
+      description: "Identité visuelle des Journées Portes ouvertes des écoles Boulle, Dupérré, Ensaama et Estienne. Projet Lauréat. Affiche animée, formats réseaux sociaux et print.",
+      images: ["assets/images/JPO/JPO2022_Bannière.jpg", "assets/images/pulsar/JPO/F81DDB39-55A0-42E1-A0C9-41BE91A0B8F4.JPG"],
       cta: null,
       hidden: false
     },
@@ -136,8 +136,8 @@ window.PORTFOLIO_V3 = {
     "11:11": {
       title: "11:11",
       meta: "",
-      description: "",
-      images: [],
+      description: "11:11 est une exposition qui montre le shifting.",
+      images: ["assets/images/diplome/diplome-01.jpeg", "assets/images/diplome/image_4.jpeg"],
       cta: null,
       hidden: false
     },
@@ -145,15 +145,15 @@ window.PORTFOLIO_V3 = {
       title: "Anome",
       meta: "",
       description: "",
-      images: [],
+      images: ["assets/images/anome/anome-01.jpg", "assets/images/anome/anome-02.jpg"],
       cta: null,
       hidden: false
     },
     "Morph": {
       title: "Morph",
       meta: "",
-      description: "",
-      images: [],
+      description: "Réalisation d’images 3D et générative. Projection au planétarium de Paris et de Berlin. Partenariat avec l’université UDK de Berlin et les étudiants en Sound Design.",
+      images: ["assets/images/plane/portal.jpg", "assets/images/plane/projection.jpg"],
       cta: null,
       hidden: false
     },
@@ -161,7 +161,7 @@ window.PORTFOLIO_V3 = {
       title: "Antipathie",
       meta: "",
       description: "",
-      images: [],
+      images: ["assets/images/antipathie/antipathie-01.jpg", "assets/images/antipathie/antipathie-02.jpg"],
       cta: null,
       hidden: false
     },
@@ -178,24 +178,30 @@ window.PORTFOLIO_V3 = {
     "pulsar": {
       title: "pulsar",
       meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-    "Sexposer": {
-      title: "Sexposer",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
+      description: "Pulsar : plongée en sonocène digicore. Mémoire de DSAA. Analyses des expériences musicales adressées à des individus hyper connectés. Écriture et conception graphique.",
+      images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
+      cta: {
+                label: "Lire ici",
+                href: "assets/pulsar_web_compressed.pdf",
+              },
       hidden: false
     },
     "Pornwashing": {
       title: "Pornwashing",
       meta: "",
+      description: "Étude de cas sousla forme d'un site internet, analyse de la campagne dirtiest porn ever de Pornhub.",
+      images: ["assets/images/pornwashing/pornwashing-01.jpg", "assets/images/pornwashing/pornwashing-02.jpg"],
+      cta: {
+                label: "Consulter ici",
+                href: "pornwashing/index.html",
+              },
+      hidden: false
+    },
+    "Sexposer": {
+      title: "Sexposer",
+      meta: "Mémoire de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique.",
       description: "",
-      images: [],
+      images: ["assets/images/sexpo1/Test.jpg"],
       cta: null,
       hidden: false
     },
@@ -203,7 +209,7 @@ window.PORTFOLIO_V3 = {
       title: "Le plein écran peut il remplacer le plein air ?",
       meta: "",
       description: "",
-      images: [],
+      images: ["assets/images/plein-ecran/plein-ecran-01.jpg", "assets/images/plein-ecran/plein-ecran-02.jpg"],
       cta: null,
       hidden: false
     },
@@ -236,16 +242,16 @@ window.PORTFOLIO_V3 = {
     "Mission Matilda": {
       title: "Mission Matilda",
       meta: "",
-      description: "",
-      images: [],
+      description: "Exposition itinérante. Jeu exploratoire conçu pour faire découvrir le portrait d’une chercheuse en astrophysique. Des objets manipulables sérigraphiés révèlent des indices menant à une expérience sur le web. Exposé à Ground Control pour le festival Double Science et lors de divers événements. Projet réalisé en duo. Conception graphique, développement, écriture et scénographie.",
+      images: ["assets/images/matilda/mission_matilda-rachel_flore-3.jpg", "assets/images/matilda/2500-1663-max.jpg"],
       cta: null,
       hidden: false
     },
     "Poster goûter": {
       title: "Poster goûter",
       meta: "",
-      description: "",
-      images: [],
+      description: "Poster interactif (éléments manipulables utilisés pour la médiation). Représentation graphique du travail du chercheur Landry Bretheau en Physique Quantique. Projet « Poster Gouter » en collaboration avec l’École du Non-Savoir (Présentation au Théatre de La Ville). Travail en équipe. Conception graphique et médiation.",
+      images: ["assets/images/postergouter/DSC_0979f-2.jpg", "assets/images/postergouter/DSC_1017f.jpg"],
       cta: null,
       hidden: false
     },
