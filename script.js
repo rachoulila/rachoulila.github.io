@@ -195,9 +195,8 @@ function buildMenu(){
   };
 
   // --- Top ---
-  makeSectionTitle("Haut de page");
+  makeSectionTitle("");
   makeDivider();
-  makeBtn("Nom", () => openCustomPage("Nom"));
   makeBtn("Contact", () => openCustomPage("Contact"));
   makeBtn("CV", () => openCustomPage("CV"));
 
@@ -206,7 +205,11 @@ function buildMenu(){
   [
     "S’exposer",
     "La Ruche",
-    "Branding",
+  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+
+  makeDivider();
+  makeSectionTitle("// Branding");
+  [
     "Polygone",
     "Hazymetry",
     "Holynyphea",
