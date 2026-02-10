@@ -31,16 +31,19 @@ window.PORTFOLIO_V3 = {
     "S’exposer": {
       title: "S’exposer",
       meta: "",
-      description: "",
+      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
       images: [],
-      cta: null,
+      cta: {
+                label: "En savoir plus",
+                href: "https://www.canva.com/design/DAHAfP8VPU8/Gvn9IX475UdR3kV0i19IxQ/view?utm_content=DAHAfP8VPU8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h900cdb8bb7",
+              },
       hidden: false
     },
     "La Ruche": {
       title: "La Ruche",
       meta: "",
       description: "",
-      images: [],
+      images: ["assets/images/vitality/vitality-01.jpg", "assets/images/vitality/vitality-02.jpg"],
       cta: null,
       hidden: false
     },
