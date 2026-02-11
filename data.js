@@ -53,7 +53,7 @@ window.PORTFOLIO_V3 = {
       title: "Polygone",
       meta: "",
       description: "Identité visuelle de l’association Le Polygone. Direction artistique et réalisation de Merch lors d’évênements.",
-      images: ["assets/images/polygone.1/STUD NEW LED-34.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
+      images: ["assets/images/polygone.1/STUD_NEW_LED-04.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
       cta: null,
       hidden: false
     },
