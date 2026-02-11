@@ -1,6 +1,11 @@
 /* global PORTFOLIO */
 const DATA = window.PORTFOLIO_V3;
 
+// Guard: if data.js didn't load, don't crash silently
+if(!DATA){
+  console.error("PORTFOLIO_V3 not found. Check that data.js is loaded before script.js.");
+}
+
 const menuEl = document.getElementById("menu");
 const galleryEl = document.getElementById("gallery");
 const infoTitle = document.getElementById("infoTitle");
@@ -10,8 +15,9 @@ const infoCta = document.getElementById("infoCta");
 
 const siteName = document.getElementById("siteName");
 const siteRoles = document.getElementById("siteRoles");
+const emailLink = document.getElementById("emailLink");
 
-// --- Custom pages (fallback when a menu item isn't a project) ---
+// --- Custom pages (non-project pages) ---
 const CUSTOM_PAGES = {
   "Contact": {
     title: "Contact",
@@ -24,7 +30,7 @@ const CUSTOM_PAGES = {
         <div style="margin-top:12px;">
           <div class="about__row">
             <span>Mail</span>
-            <a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a>
+            <a class="uLink" href="mailto:${DATA?.site?.email || ""}">${DATA?.site?.email || ""}</a>
           </div>
 
           <div class="about__row">
@@ -48,7 +54,8 @@ const CUSTOM_PAGES = {
   "CV": {
     title: "CV",
     meta: "",
-    images: ["assets/images/CV 2026.jpg"],
+    // Preview image (safe). Replace anytime.
+    images: ["assets/images/pages/cv.jpg"],
     html: `
       <div class="muted">Consulter mon CV en PDF.</div>
     `,
@@ -89,7 +96,7 @@ const CUSTOM_PAGES = {
     title: "À propos",
     meta: "",
     images: [],
-    html: (DATA.sections.find(s => s.id === "about")?.content?.html) || ""
+    html: (DATA?.sections?.find(s => s.id === "about")?.content?.html) || ""
   }
 };
 
@@ -136,7 +143,7 @@ function renderInfo({title, meta, description, cta, html}){
 }
 
 function openProject(key){
-  const p = DATA.projects?.[key];
+  const p = DATA?.projects?.[key];
   if(!p){
     renderFeed([]);
     renderInfo({title: key, meta: "", description: "Projet introuvable."});
@@ -157,7 +164,7 @@ function openCustomPage(key){
   renderInfo({title: p.title || key, meta: p.meta || "", html: p.html || p.description || "", cta: p.cta || null});
 }
 
-// ✅ indispensable pour tes liens cliquables dans les descriptions (ex: "Studio Rëva")
+// Make internal links work from project descriptions
 window.openCustomPage = openCustomPage;
 
 function scrollToTop(){
@@ -192,7 +199,7 @@ function buildMenu(){
     return btn;
   };
 
-  // --- Top (sous ton nom / based in paris) ---
+  // --- Top (under name/roles) ---
   makeSectionTitle("");
   makeDivider();
   makeBtn("Contact", () => openCustomPage("Contact"));
@@ -249,12 +256,26 @@ function buildMenu(){
 }
 
 function init(){
-  if(!menuEl || !galleryEl || !infoTitle || !infoMeta || !infoDesc || !infoCta){
-    console.error("UI manquante: vérifie les ids menu/gallery/infoTitle/infoMeta/infoDesc/infoCta dans index.html");
+  if(!DATA){
+    // show minimal message
+    if(infoTitle) infoTitle.textContent = "Erreur";
+    if(infoDesc) infoDesc.textContent = "data.js n'a pas chargé.";
     return;
   }
+
+  if(!menuEl || !galleryEl || !infoTitle || !infoMeta || !infoDesc || !infoCta){
+    console.error("UI missing: check ids in index.html");
+    return;
+  }
+
   if(siteName) siteName.textContent = DATA.site?.name || "";
   if(siteRoles) siteRoles.innerHTML = (DATA.site?.roles || []).join("<br/>");
+
+  // Hide global footer email (email stays in Contact/About pages)
+  if(emailLink){
+    emailLink.textContent = "";
+    emailLink.removeAttribute("href");
+  }
 
   buildMenu();
 }

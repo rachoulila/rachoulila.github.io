@@ -26,6 +26,15 @@ window.PORTFOLIO_V3 = {
   ],
 
   projects: {
+    "S’exposer": {
+      title: "S’exposer",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
     // --- Stratégie & impact ---
     "Sexposer": {
       title: "Sexposer",
