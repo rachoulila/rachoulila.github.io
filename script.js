@@ -175,6 +175,8 @@ function openCustomPage(key){
   });
 }
 
+window.openCustomPage = openCustomPage;
+
 function openProjectFromLabel(label){
   const key = PROJECT_ALIASES[label] || label;
   openProject(key);
