@@ -193,5 +193,5 @@ window.PORTFOLIO_V3 = {
       cta: null,
       hidden: false
     },
-
-    
+  }
+};
