@@ -21,7 +21,7 @@ const CUSTOM_PAGES = {
       <div class="about">
         <div class="muted">${DATA.site.about || ""}</div>
         <div style="margin-top:12px;">
-          <div class="about__row"><span>Mail</span><a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a></div>
+          <div class="about__row"><span></span><a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a></div>
         </div>
       </div>
     `
@@ -290,8 +290,6 @@ function buildMenu(){
 function init(){
   siteName.textContent = DATA.site.name;
   siteRoles.innerHTML = (DATA.site.roles || []).join("<br/>");
-  emailLink.textContent = DATA.site.email;
-  emailLink.href = "mailto:" + DATA.site.email;
 
   buildMenu();
 }
