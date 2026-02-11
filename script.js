@@ -13,70 +13,57 @@ const siteRoles = document.getElementById("siteRoles");
 
 // --- Custom pages (fallback when a menu item isn't a project) ---
 const CUSTOM_PAGES = {
-  "": {
-    title: DATA.site.name,
-    meta: (DATA.site.roles || []).join(" · "),
+  "Contact": {
+    title: "Contact",
+    meta: "",
+    images: [],
     html: `
       <div class="about">
-        <div class="muted">${DATA.site.about || ""}</div>
+        <div class="muted">Vous pouvez me contacter ici :</div>
+
         <div style="margin-top:12px;">
           <div class="about__row">
-            <span></span>
+            <span>Mail</span>
             <a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a>
+          </div>
+
+          <div class="about__row">
+            <span>Téléphone</span>
+            <a class="uLink" href="tel:+33651880125">+33 6 51 88 01 25</a>
+          </div>
+
+          <div class="about__row">
+            <span>Instagram</span>
+            <a class="uLink"
+               href="https://www.instagram.com/rachel.truchot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+               target="_blank" rel="noreferrer">
+              @rachel.truchot
+            </a>
           </div>
         </div>
       </div>
     `
   },
-"Contact": {
-  title: "Contact",
-  meta: "",
-  html: `
-    <div class="about">
-      <div class="muted">Vous pouvez me contacter ici :</div>
 
-      <div style="margin-top:12px;">
-        <div class="about__row">
-          <span>Mail</span>
-          <a class="uLink" href="mailto:${DATA.site.email}">
-            ${DATA.site.email}
-          </a>
-        </div>
-
-        <div class="about__row">
-          <span>Téléphone</span>
-          <a class="uLink" href="tel:+33651880125">
-            +33 6 51 88 01 25
-          </a>
-        </div>
-
-        <div class="about__row">
-          <span>Instagram</span>
-          <a class="uLink" href="https://www.instagram.com/rachel.truchot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-            @rachel.truchot
-          </a>
-        </div>
-      </div>
-    </div>
-  `
-},
   "CV": {
     title: "CV",
     meta: "",
-      images: [
-    "assets/CV 2026 2.pdf"
-  ],
+    // ✅ placeholder : tu peux le remplacer plus tard par ton vrai visuel
+    // Mets un fichier ici : assets/images/pages/cv.jpg
+    images: ["assets/images/pages/cv.jpg"],
     html: `
-      <div class="muted">Ajoutez ici un lien vers votre CV (PDF) dès qu'il est prêt.</div>
+      <div class="muted">Consulter mon CV en PDF.</div>
     `,
-  cta: {
-    label: "Ouvrir le CV",
-    href: "assets/CV 2026 2.pdf"
-  }
+    cta: {
+      label: "Ouvrir le CV",
+      href: "assets/CV 2026 2.pdf"
+    }
   },
+
   "Compétences techniques": {
     title: "Compétences techniques",
     meta: "",
+    images: [],
     html: `
       <div class="kv">
         <div class="kv__row"><div class="kv__k">Design</div><div class="kv__v">Branding · Éditorial · Typo</div></div>
@@ -85,25 +72,28 @@ const CUSTOM_PAGES = {
       </div>
     `
   },
+
   "Studio Rëva": {
     title: "Studio Rëva",
     meta: "",
+    images: [],
     html: `<div class="muted">Page studio (à compléter).</div>`
   },
+
   "Musique": {
     title: "Musique",
     meta: "",
+    images: [],
     html: `<div class="muted">Sélection de projets / collaborations musique (à compléter).</div>`
   },
+
   "À propos": {
     title: "À propos",
     meta: "",
+    images: [],
     html: (DATA.sections.find(s => s.id === "about")?.content?.html) || ""
   }
 };
-
-// IMPORTANT : on enlève les aliases, car tu as déjà les projets avec les bons noms dans data.js
-const PROJECT_ALIASES = {};
 
 function setActive(btn){
   document.querySelectorAll(".menu__item").forEach(b => b.classList.remove("is-active"));
@@ -166,21 +156,11 @@ function openCustomPage(key){
     return;
   }
   renderFeed(p.images || []);
-
-  renderInfo({
-    title: p.title || key,
-    meta: p.meta || "",
-    html: p.html || p.description || "",
-    cta: p.cta || null
-  });
+  renderInfo({title: p.title || key, meta: p.meta || "", html: p.html || p.description || "", cta: p.cta || null});
 }
 
+// ✅ indispensable pour tes liens cliquables dans les descriptions (ex: "Studio Rëva")
 window.openCustomPage = openCustomPage;
-
-function openProjectFromLabel(label){
-  const key = PROJECT_ALIASES[label] || label;
-  openProject(key);
-}
 
 function scrollToTop(){
   document.querySelector(".center")?.scrollTo({top:0, behavior:"smooth"});
@@ -214,76 +194,39 @@ function buildMenu(){
     return btn;
   };
 
-  // --- Top ---
+  // --- Top (sous ton nom / based in paris) ---
   makeSectionTitle("");
   makeDivider();
-
   makeBtn("Contact", () => openCustomPage("Contact"));
   makeBtn("CV", () => openCustomPage("CV"));
 
   makeDivider();
   makeSectionTitle("// Stratégie & impact");
-  [
-    "Sexposer",
-    "La Ruche",
-  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+  ["S’exposer", "La Ruche", "Sexposer"].forEach(k => makeBtn(k, () => openProject(k)));
 
   makeDivider();
   makeSectionTitle("// Branding");
-  [
-    "Polygone",
-    "Hazymetry",
-    "Holynyphea",
-    "Breakin Nailz",
-    "Nandor"
-  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+  ["Polygone", "Hazymetry", "Holynymphea", "Breakin Nailz", "Nandor"].forEach(k => makeBtn(k, () => openProject(k)));
 
   makeDivider();
   makeSectionTitle("// Communication");
-  [
-    "Summer et Zima",
-    "JPO",
-    "Encore",
-    "Nandor j’adore saison 2",
-    "Etheral"
-  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+  ["Summer et Zima", "JPO", "Encore", "Nandor j’adore saison 2", "Etheral"].forEach(k => makeBtn(k, () => openProject(k)));
 
   makeDivider();
   makeSectionTitle("// Digital & expérience interactives");
-  [
-    "11:11",
-    "Anome",
-    "Morph",
-    "Antipathie",
-    "Commandes 3D"
-  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+  ["11:11", "Anome", "Morph", "Antipathie", "Commandes 3D"].forEach(k => makeBtn(k, () => openProject(k)));
 
   makeDivider();
   makeSectionTitle("// Recherches & édition");
-  [
-    "pulsar",
-    "Sexposer",
-    "Pornwashing",
-    "Le plein écran peut il remplacer le plein air ?"
-  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+  ["pulsar", "Sexposé", "Pornwashing", "Le plein écran peut il remplacer le plein air ?"].forEach(k => makeBtn(k, () => openProject(k)));
 
   makeDivider();
   makeSectionTitle("// Évènements & médiation");
-  [
-    "Longueur d’onde",
-    "Salon du chocolat",
-    "La collectiv’",
-    "Mission Matilda",
-    "Poster goûter"
-  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+  ["Longueur d’onde", "Salon du chocolat", "La collectiv’", "Mission Matilda", "Poster goûter"].forEach(k => makeBtn(k, () => openProject(k)));
 
   makeDivider();
   makeSectionTitle("// Expérimentations");
-  [
-    "Couleurs et matières",
-    "Textuellement transmissibles",
-    "Encre thermo sensibles"
-  ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
+  ["Couleurs et matières", "Textuellement transmissibles", "Encre thermo sensibles"].forEach(k => makeBtn(k, () => openProject(k)));
 
   makeDivider();
   makeSectionTitle("Bas de page");
@@ -299,21 +242,19 @@ function buildMenu(){
   scrollBtn.addEventListener("click", () => scrollToTop());
   menuEl.appendChild(scrollBtn);
 
-  // Default open = Nom
+  // Default open: Contact
   const firstBtn = document.querySelector(".menu__item");
   if(firstBtn){
     firstBtn.classList.add("is-active");
-    openCustomPage("Nom");
+    openCustomPage("Contact");
   }
 }
 
 function init(){
-  // garde-fous (si un id manque, on évite le crash total)
   if(!menuEl || !galleryEl || !infoTitle || !infoMeta || !infoDesc || !infoCta){
     console.error("UI manquante: vérifie les ids menu/gallery/infoTitle/infoMeta/infoDesc/infoCta dans index.html");
     return;
   }
-
   if(siteName) siteName.textContent = DATA.site?.name || "";
   if(siteRoles) siteRoles.innerHTML = (DATA.site?.roles || []).join("<br/>");
 
