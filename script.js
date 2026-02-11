@@ -10,7 +10,6 @@ const infoCta = document.getElementById("infoCta");
 
 const siteName = document.getElementById("siteName");
 const siteRoles = document.getElementById("siteRoles");
-const emailLink = document.getElementById("emailLink");
 
 // --- Custom pages (fallback when a menu item isn't a project) ---
 const CUSTOM_PAGES = {
@@ -21,7 +20,10 @@ const CUSTOM_PAGES = {
       <div class="about">
         <div class="muted">${DATA.site.about || ""}</div>
         <div style="margin-top:12px;">
-          <div class="about__row"><span></span><a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a></div>
+          <div class="about__row">
+            <span></span>
+            <a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a>
+          </div>
         </div>
       </div>
     `
@@ -33,7 +35,10 @@ const CUSTOM_PAGES = {
       <div class="about">
         <div class="muted">Vous pouvez me contacter ici :</div>
         <div style="margin-top:12px;">
-          <div class="about__row"><span>Mail</span><a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a></div>
+          <div class="about__row">
+            <span>Mail</span>
+            <a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a>
+          </div>
         </div>
       </div>
     `
@@ -60,16 +65,12 @@ const CUSTOM_PAGES = {
   "Studio Rëva": {
     title: "Studio Rëva",
     meta: "",
-    html: `
-      <div class="muted">Page studio (à compléter).</div>
-    `
+    html: `<div class="muted">Page studio (à compléter).</div>`
   },
   "Musique": {
     title: "Musique",
     meta: "",
-    html: `
-      <div class="muted">Sélection de projets / collaborations musique (à compléter).</div>
-    `
+    html: `<div class="muted">Sélection de projets / collaborations musique (à compléter).</div>`
   },
   "À propos": {
     title: "À propos",
@@ -78,14 +79,8 @@ const CUSTOM_PAGES = {
   }
 };
 
-// Map menu labels to existing project keys (to keep image links intact where possible)
-const PROJECT_ALIASES = {
-  "Hazymetry": "Hazymmetry",
-  "Etheral": "Ethereal",
-  "pulsar": "Pulsar",
-  "Sexposer": "Diplôme",
-  "Polygone": "Branding"
-};
+// IMPORTANT : on enlève les aliases, car tu as déjà les projets avec les bons noms dans data.js
+const PROJECT_ALIASES = {};
 
 function setActive(btn){
   document.querySelectorAll(".menu__item").forEach(b => b.classList.remove("is-active"));
@@ -95,7 +90,6 @@ function setActive(btn){
 function renderFeed(images){
   galleryEl.innerHTML = "";
   if(!images || !images.length){
-    // simple empty state
     const div = document.createElement("div");
     div.style.padding = "18px";
     div.style.color = "var(--muted)";
@@ -131,7 +125,7 @@ function renderInfo({title, meta, description, cta, html}){
 }
 
 function openProject(key){
-  const p = DATA.projects[key];
+  const p = DATA.projects?.[key];
   if(!p){
     renderFeed([]);
     renderInfo({title: key, meta: "", description: "Projet introuvable."});
@@ -139,11 +133,6 @@ function openProject(key){
   }
   renderFeed(p.images);
   renderInfo({title: p.title || key, meta: p.meta, description: p.description, cta: p.cta});
-}
-
-function openPage(section){
-  renderFeed([]);
-  renderInfo({title: section.content.title, meta: section.content.meta, html: section.content.html});
 }
 
 function openCustomPage(key){
@@ -197,6 +186,9 @@ function buildMenu(){
   // --- Top ---
   makeSectionTitle("");
   makeDivider();
+
+  // ✅ Tu voulais Nom / Contact / CV en haut
+  makeBtn("Nom", () => openCustomPage("Nom"));
   makeBtn("Contact", () => openCustomPage("Contact"));
   makeBtn("CV", () => openCustomPage("CV"));
 
@@ -272,14 +264,13 @@ function buildMenu(){
   makeBtn("Studio Rëva", () => openCustomPage("Studio Rëva"));
   makeBtn("Musique", () => openCustomPage("Musique"));
 
-  // extra utility: scroll to top without changing active state
   const scrollBtn = document.createElement("button");
   scrollBtn.className = "menu__item";
   scrollBtn.textContent = "↑ Retour en haut";
   scrollBtn.addEventListener("click", () => scrollToTop());
   menuEl.appendChild(scrollBtn);
 
-  // Default open
+  // Default open = Nom
   const firstBtn = document.querySelector(".menu__item");
   if(firstBtn){
     firstBtn.classList.add("is-active");
@@ -288,12 +279,16 @@ function buildMenu(){
 }
 
 function init(){
-  siteName.textContent = DATA.site.name;
-  siteRoles.innerHTML = (DATA.site.roles || []).join("<br/>");
-emailLink.textContent = DATA.site.email;
-emailLink.href = "mailto:" + DATA.site.email;
+  // garde-fous (si un id manque, on évite le crash total)
+  if(!menuEl || !galleryEl || !infoTitle || !infoMeta || !infoDesc || !infoCta){
+    console.error("UI manquante: vérifie les ids menu/gallery/infoTitle/infoMeta/infoDesc/infoCta dans index.html");
+    return;
   }
+
+  if(siteName) siteName.textContent = DATA.site?.name || "";
+  if(siteRoles) siteRoles.innerHTML = (DATA.site?.roles || []).join("<br/>");
 
   buildMenu();
 }
-init();
+
+document.addEventListener("DOMContentLoaded", init);
