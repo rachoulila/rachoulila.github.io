@@ -25,12 +25,22 @@ window.PORTFOLIO_V3 = {
     }
   ],
 
+  projects: {
+    "S’exposer": {
+      title: "S’exposer",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
     // --- Stratégie & impact ---
     "Sexposer": {
       title: "Sexposer",
-      meta: "",
-      description: "Projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
-      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
+      meta: "Projet de diplôme de DN Made.",
+      description: "Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
+      images: ["assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
       cta: null,
       hidden: false
     },
@@ -38,7 +48,7 @@ window.PORTFOLIO_V3 = {
     "La Ruche": {
       title: "La Ruche",
       meta: "",
-      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
+      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.<br> Projet réalisé avec Andréa Terroso.",
       images: ["assets/images/vitality/vitality-01.jpg", "assets/images/vitality/vitality-02.jpg"],
       cta: {
         label: "En savoir plus",
@@ -57,7 +67,7 @@ window.PORTFOLIO_V3 = {
       hidden: false
     },
 
-    "Hazymetry": {
+    "Hazymetry":{
       title: "Hazymetry",
       meta: "",
       description: "Typographie, Logo, et assets réseaux sociaux pour le groupe Hazymetry.",
@@ -66,35 +76,31 @@ window.PORTFOLIO_V3 = {
         label: "Découvrir",
         href: "https://www.instagram.com/hazymetry/"
       },
-      hidden: true
-    },
-
-    "Holynymphea": {
-      title: "Holynymphea",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-
-    "Breakin Nailz": {
-      title: "Breakin Nailz",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-
-    "Nandor": {
-      title: "Nandor",
-      meta: "",
-      description: "Identité pour le DJ Nandor. <br>Un projet du <a href=\"#\" class=\"uLink\" onclick=\"openCustomPage('Studio Rëva'); return false;\">Studio Rëva</a>.",
-      images: [],
-      cta: null,
-      hidden: false
-    },
+      hidden: true },
+    
+    "Holynymphea":
+    { title: "Holynyphea",
+     meta: "",
+     description: "",
+     images: [],
+     cta: null,
+     hidden: true },
+    
+    "Breakin Nailz":
+    { title: "Breakin Nailz",
+     meta: "",
+     description: "",
+     images: [],
+     cta: null,
+     hidden: true },
+    
+    "Nandor":
+    { title: "Nandor",
+     meta: "",
+     description: "Identité pour le DJ Nandor. <br> Un projet du <a href="#" class="uLink" onclick="openCustomPage('Studio Rëva'); return false;">Studio Rëva</a>.",
+     images: [],
+     cta: null,
+     hidden: false },
 
     // --- Communication ---
     "Summer et Zima": {
@@ -115,38 +121,15 @@ window.PORTFOLIO_V3 = {
       hidden: false
     },
 
-    "Encore": {
-      title: "Encore",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-
-    "Nandor j’adore saison 2": {
-      title: "Nandor j’adore saison 2",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-
-    "Etheral": {
-      title: "Etheral",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
+    "Encore": { title: "Encore", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Nandor j’adore saison 2": { title: "Nandor j’adore saison 2", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Etheral": { title: "Etheral", meta: "", description: "", images: [], cta: null, hidden: false },
 
     // --- Digital & expérience interactives ---
     "11:11": {
       title: "11:11",
       meta: "",
-      description: "À l’ère du web, nos identités se multiplient : avatars, profils, jeux de rôle, réalités alternatives... Et pourtant, dans ce foisonnement de mondes numériques, nos imaginaires semblent s’uniformiser.<br> Le shifting, cette pratique née en ligne où chacun tente de rejoindre une réalité parallèle rêvée, en est le miroir : il révèle à la fois une soif d’évasion et une standardisation des désirs, souvent calquée sur des références collectives (Harry Potter, univers fantasy, dystopies). Popularisé sur TikTok, Reddit ou Wattpad, le shifting est une pratique où l’on tente, par concentration, méditation ou auto-hypnose, de “changer de réalité”. Mais que se passerait-il si, au lieu de fuir dans des mondes convenus, nous partions à la reconquête de nos propres imaginaires ?<br> Le collectif Anome a voulu relever ce défi : Créer des réalités à partir de vous. Créer des mondes non pas inspirés de références culturelles, mais issus de fragments intimes, récoltés auprès de visiteurs via des questionnaires, portant sur des souvenirs, des mondes intérieurs. Ces réponses ont nourri la création de trois réalités imaginaires, modelées en sons, textures, objets, et paysages numériques.<br>11:11 est une brèche. Un espace pour questionner nos désirs et ouvrir à nouveau les portes d’une imagination libre et personnelle.<br>Projet réalisé avec TERROSO Andréa, TREHIN Mathieu, en tant que Collectif Anome.
+      description: "11:11 est une exposition qui montre le shifting.",",
       images: ["assets/images/diplome/diplome-01.jpeg", "assets/images/diplome/image_4.jpeg"],
       cta: null,
       hidden: false
@@ -155,8 +138,8 @@ window.PORTFOLIO_V3 = {
     "Anome": {
       title: "Anome",
       meta: "",
-      description: "Expériences immersives. Workshop IA.",
-      images: ["assets/images/anome_ia"],
+      description: "",
+      images: ["assets/images/anome/anome-01.jpg", "assets/images/anome/anome-02.jpg"],
       cta: null,
       hidden: false
     },
@@ -173,31 +156,21 @@ window.PORTFOLIO_V3 = {
     "Antipathie": {
       title: "Antipathie",
       meta: "",
-      description: "Expérience interactive à partir d'un oscilloscope.",
-      images: ["assets/images/antipathie/Anti2.jpg", "assets/images/antipathie/Anti5.jpg"],
+      description: "",
+      images: ["assets/images/antipathie/antipathie-01.jpg", "assets/images/antipathie/antipathie-02.jpg"],
       cta: null,
       hidden: false
     },
 
-    "Commandes 3D": {
-      title: "Commandes 3D",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
+    "Commandes 3D": { title: "Commandes 3D", meta: "", description: "", images: [], cta: null, hidden: false },
 
     // --- Recherches & édition ---
-    "Pulsar": {
-      title: "Pulsar",
+    "pulsar": {
+      title: "pulsar",
       meta: "",
       description: "Pulsar : plongée en sonocène digicore. Mémoire de DSAA. Analyses des expériences musicales adressées à des individus hyper connectés. Écriture et conception graphique.",
       images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
-      cta: {
-        label: "Lire ici",
-        href: "assets/pulsar_web-comp.pdf"
-      },
+      cta: { label: "Lire ici", href: "assets/pulsar_web_compressed.pdf" },
       hidden: false
     },
 
@@ -206,18 +179,16 @@ window.PORTFOLIO_V3 = {
       meta: "",
       description: "Étude de cas sous la forme d'un site internet, analyse de la campagne dirtiest porn ever de Pornhub.",
       images: ["assets/images/pornwashing/pornwashing-01.jpg", "assets/images/pornwashing/pornwashing-02.jpg"],
-      cta: {
-        label: "Consulter ici",
-        href: "pornwashing/index.html"
-      },
+      cta: { label: "Consulter ici", href: "pornwashing/index.html" },
       hidden: false
     },
 
-    "Sexposé": {
-      title: "Sexposé",
-      meta: "Mémoire de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique.",
-      description: "",
-      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo1/ouvert.jpg"],
+    // Sexposer
+    "Sexposer": {
+      title: "Sexposer",
+      meta: "Projet de diplôme de DN Made.",
+      description: "Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
+      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
       cta: null,
       hidden: false
     },
@@ -228,36 +199,13 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: ["assets/images/plein-ecran/plein-ecran-01.jpg", "assets/images/plein-ecran/plein-ecran-02.jpg"],
       cta: null,
-      hidden: true
+      hidden: false
     },
 
     // --- Évènements & médiation ---
-    "Longueur d’onde": {
-      title: "Longueur d’onde",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-
-    "Salon du chocolat": {
-      title: "Salon du chocolat",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-
-    "La collectiv’": {
-      title: "La collectiv’",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
+    "Longueur d’onde": { title: "Longueur d’onde", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Salon du chocolat": { title: "Salon du chocolat", meta: "", description: "", images: [], cta: null, hidden: false },
+    "La collectiv’": { title: "La collectiv’", meta: "", description: "", images: [], cta: null, hidden: false },
 
     "Mission Matilda": {
       title: "Mission Matilda",
@@ -278,31 +226,8 @@ window.PORTFOLIO_V3 = {
     },
 
     // --- Expérimentations ---
-    "Couleurs et matières": {
-      title: "Couleurs et matières",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-
-    "Textuellement transmissibles": {
-      title: "Textuellement transmissibles",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-
-    "Encre thermo sensibles": {
-      title: "Encre thermo sensibles",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    }
+    "Couleurs et matières": { title: "Couleurs et matières", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Textuellement transmissibles": { title: "Textuellement transmissibles", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Encre thermo sensibles": { title: "Encre thermo sensibles", meta: "", description: "", images: [], cta: null, hidden: false }
   }
 };
