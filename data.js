@@ -1,9 +1,9 @@
 window.PORTFOLIO_V3 = {
   site: {
-    name: "Votre Nom",
-    roles: ["Direction artistique", "Design", "Édition", "Digital"],
-    email: "mail@exemple.com",
-    about: "Texte de présentation court (bio)."
+    name: "RACHEL TRUCHOT",
+    roles: ["GRAPHIC & DIGITAL DESIGNER", "COMMUNICATION STRATEGIST", "BASED IN PARIS"],
+    email: "r@truchot.ch",
+    about: "Hi !"
   },
 
   // Utilisé par la page "À propos" (CUSTOM_PAGES lit sections[id='about'])
@@ -13,12 +13,12 @@ window.PORTFOLIO_V3 = {
       label: "About",
       type: "page",
       content: {
-        title: "À propos",
+        title: "About",
         meta: "",
         html: `
           <div class="about">
             <div class="muted">
-              Remplace ce texte par ta présentation longue / démarche / bio.
+              Hi ! I'm Rachel, a graphic & digital designer, and communication strategist, based in Paris.
             </div>
           </div>
         `
@@ -28,8 +28,8 @@ window.PORTFOLIO_V3 = {
 
   projects: {
     // --- Stratégie & impact ---
-    "S’exposer": {
-      title: "S’exposer",
+    "Sexposer": {
+      title: "Sexposer",
       meta: "",
       description: "Projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
       images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
