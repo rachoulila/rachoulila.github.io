@@ -25,16 +25,6 @@ window.PORTFOLIO_V3 = {
     }
   ],
 
-  projects: {
-    "S’exposer": {
-      title: "S’exposer",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-
     // --- Stratégie & impact ---
     "Sexposer": {
       title: "Sexposer",
@@ -131,7 +121,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     "Nandor j’adore saison 2": {
@@ -140,7 +130,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     "Etheral": {
@@ -149,14 +139,14 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     // --- Digital & expérience interactives ---
     "11:11": {
       title: "11:11",
       meta: "",
-      description: "11:11 est une exposition qui montre le shifting.",
+      description: "À l’ère du web, nos identités se multiplient : avatars, profils, jeux de rôle, réalités alternatives... Et pourtant, dans ce foisonnement de mondes numériques, nos imaginaires semblent s’uniformiser.<br> Le shifting, cette pratique née en ligne où chacun tente de rejoindre une réalité parallèle rêvée, en est le miroir : il révèle à la fois une soif d’évasion et une standardisation des désirs, souvent calquée sur des références collectives (Harry Potter, univers fantasy, dystopies). Popularisé sur TikTok, Reddit ou Wattpad, le shifting est une pratique où l’on tente, par concentration, méditation ou auto-hypnose, de “changer de réalité”. Mais que se passerait-il si, au lieu de fuir dans des mondes convenus, nous partions à la reconquête de nos propres imaginaires ?<br> Le collectif Anome a voulu relever ce défi : Créer des réalités à partir de vous. Créer des mondes non pas inspirés de références culturelles, mais issus de fragments intimes, récoltés auprès de visiteurs via des questionnaires, portant sur des souvenirs, des mondes intérieurs. Ces réponses ont nourri la création de trois réalités imaginaires, modelées en sons, textures, objets, et paysages numériques.<br>11:11 est une brèche. Un espace pour questionner nos désirs et ouvrir à nouveau les portes d’une imagination libre et personnelle.<br>Projet réalisé avec TERROSO Andréa, TREHIN Mathieu, en tant que Collectif Anome.
       images: ["assets/images/diplome/diplome-01.jpeg", "assets/images/diplome/image_4.jpeg"],
       cta: null,
       hidden: false
@@ -165,8 +155,8 @@ window.PORTFOLIO_V3 = {
     "Anome": {
       title: "Anome",
       meta: "",
-      description: "",
-      images: ["assets/images/anome/anome-01.jpg", "assets/images/anome/anome-02.jpg"],
+      description: "Expériences immersives. Workshop IA.",
+      images: ["assets/images/anome_ia"],
       cta: null,
       hidden: false
     },
@@ -183,8 +173,8 @@ window.PORTFOLIO_V3 = {
     "Antipathie": {
       title: "Antipathie",
       meta: "",
-      description: "",
-      images: ["assets/images/antipathie/antipathie-01.jpg", "assets/images/antipathie/antipathie-02.jpg"],
+      description: "Expérience interactive à partir d'un oscilloscope.",
+      images: ["assets/images/antipathie/Anti2.jpg", "assets/images/antipathie/Anti5.jpg"],
       cta: null,
       hidden: false
     },
@@ -195,12 +185,12 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     // --- Recherches & édition ---
-    "pulsar": {
-      title: "pulsar",
+    "Pulsar": {
+      title: "Pulsar",
       meta: "",
       description: "Pulsar : plongée en sonocène digicore. Mémoire de DSAA. Analyses des expériences musicales adressées à des individus hyper connectés. Écriture et conception graphique.",
       images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
@@ -227,7 +217,7 @@ window.PORTFOLIO_V3 = {
       title: "Sexposé",
       meta: "Mémoire de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique.",
       description: "",
-      images: ["assets/images/sexpo1/Test.jpg"],
+      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo1/ouvert.jpg"],
       cta: null,
       hidden: false
     },
@@ -238,7 +228,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: ["assets/images/plein-ecran/plein-ecran-01.jpg", "assets/images/plein-ecran/plein-ecran-02.jpg"],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     // --- Évènements & médiation ---
@@ -248,7 +238,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     "Salon du chocolat": {
@@ -257,7 +247,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     "La collectiv’": {
@@ -266,7 +256,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     "Mission Matilda": {
@@ -294,7 +284,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     "Textuellement transmissibles": {
@@ -303,7 +293,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     },
 
     "Encre thermo sensibles": {
@@ -312,7 +302,7 @@ window.PORTFOLIO_V3 = {
       description: "",
       images: [],
       cta: null,
-      hidden: false
+      hidden: true
     }
   }
 };
