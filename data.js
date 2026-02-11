@@ -27,11 +27,11 @@ window.PORTFOLIO_V3 = {
 
   projects: {
     // --- Stratégie & impact ---
-    "S’exposer": {
-      title: "S’exposer",
-      meta: "",
-      description: "",
-      images: [],
+    "Sexposer": {
+      title: "Sexposer",
+      meta: "Projet de diplôme de DN Made.",
+      description: "Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
+      images: ["assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
       cta: null,
       hidden: false
     },
@@ -39,7 +39,7 @@ window.PORTFOLIO_V3 = {
     "La Ruche": {
       title: "La Ruche",
       meta: "",
-      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
+      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.<br> Projet réalisé avec Andréa Terroso.",
       images: ["assets/images/vitality/vitality-01.jpg", "assets/images/vitality/vitality-02.jpg"],
       cta: {
         label: "En savoir plus",
@@ -144,7 +144,7 @@ window.PORTFOLIO_V3 = {
       hidden: false
     },
 
-    // ✅ Sexposer (UNE SEULE FOIS)
+    // Sexposer
     "Sexposer": {
       title: "Sexposer",
       meta: "Projet de diplôme de DN Made.",
