@@ -57,30 +57,6 @@ window.PORTFOLIO_V3 = {
       cta: null,
       hidden: false
     },
-    "Hazymetry": {
-      title: "Hazymetry",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-    "Holynymphea": {
-      title: "Holynymphea",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-    "Breakin Nailz": {
-      title: "Breakin Nailz",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
     "Nandor": {
       title: "Nandor",
       meta: "",
@@ -107,24 +83,8 @@ window.PORTFOLIO_V3 = {
       cta: null,
       hidden: false
     },
-    "Encore": {
-      title: "Encore",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
     "Nandor j’adore saison 2": {
       title: "Nandor j’adore saison 2",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-    "Etheral": {
-      title: "Etheral",
       meta: "",
       description: "",
       images: [],
@@ -165,18 +125,10 @@ window.PORTFOLIO_V3 = {
       cta: null,
       hidden: false
     },
-    "Commandes 3D": {
-      title: "Commandes 3D",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
 
     // --- Recherches & édition ---
-    "pulsar": {
-      title: "pulsar",
+    "Pulsar": {
+      title: "Pulsar",
       meta: "",
       description: "Pulsar : plongée en sonocène digicore. Mémoire de DSAA. Analyses des expériences musicales adressées à des individus hyper connectés. Écriture et conception graphique.",
       images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
@@ -205,32 +157,8 @@ window.PORTFOLIO_V3 = {
       cta: null,
       hidden: false
     },
-    "Le plein écran peut il remplacer le plein air ?": {
-      title: "Le plein écran peut il remplacer le plein air ?",
-      meta: "",
-      description: "",
-      images: ["assets/images/plein-ecran/plein-ecran-01.jpg", "assets/images/plein-ecran/plein-ecran-02.jpg"],
-      cta: null,
-      hidden: false
-    },
 
     // --- Évènements & médiation ---
-    "Longueur d’onde": {
-      title: "Longueur d’onde",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
-    "Salon du chocolat": {
-      title: "Salon du chocolat",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
     "La collectiv’": {
       title: "La collectiv’",
       meta: "",
@@ -257,14 +185,6 @@ window.PORTFOLIO_V3 = {
     },
 
     // --- Expérimentations ---
-    "Couleurs et matières": {
-      title: "Couleurs et matières",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
     "Textuellement transmissibles": {
       title: "Textuellement transmissibles",
       meta: "",
@@ -273,60 +193,5 @@ window.PORTFOLIO_V3 = {
       cta: null,
       hidden: false
     },
-    "Encre thermo sensibles": {
-      title: "Encre thermo sensibles",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: false
-    },
 
-    // ------------------------------------------------------------------
-    // BONUS : cibles d'alias (si tu as déjà des dossiers/images existants)
-    // Ton script.js mappe : Hazymetry -> Hazymmetry, Etheral -> Ethereal,
-    // pulsar -> Pulsar, Sexposer -> Diplôme, Polygone -> Branding
-    // ------------------------------------------------------------------
-
-    "Hazymmetry": {
-      title: "Hazymmetry",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-    "Ethereal": {
-      title: "Ethereal",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-    "Pulsar": {
-      title: "Pulsar",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-    "Diplôme": {
-      title: "Diplôme",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    },
-    "Branding": {
-      title: "Branding",
-      meta: "",
-      description: "",
-      images: [],
-      cta: null,
-      hidden: true
-    }
-  }
-};
+    
