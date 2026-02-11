@@ -53,7 +53,7 @@ window.PORTFOLIO_V3 = {
       title: "Polygone",
       meta: "",
       description: "Identité visuelle de l’association Le Polygone. Direction artistique et réalisation de Merch lors d’évênements.",
-      images: ["assets/images/polygone.1/STUD NEW LED-34.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
+      images: ["assets/images/polygone.1/STUD_NEW_LED-34.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
       cta: null,
       hidden: false
     },
@@ -79,7 +79,7 @@ window.PORTFOLIO_V3 = {
       title: "JPO",
       meta: "",
       description: "Identité visuelle des Journées Portes ouvertes des écoles Boulle, Dupérré, Ensaama et Estienne. Projet Lauréat. Affiche animée, formats réseaux sociaux et print.",
-      images: ["assets/images/JPO/JPO2022_Bannière.jpg", "assets/images/pulsar/JPO/F81DDB39-55A0-42E1-A0C9-41BE91A0B8F4.JPG"],
+      images: ["assets/images/JPO/JPO2022_Bannière.jpg", "assets/images/JPO/F81DDB39-55A0-42E1-A0C9-41BE91A0B8F4.JPG"],
       cta: null,
       hidden: false
     },
@@ -134,7 +134,7 @@ window.PORTFOLIO_V3 = {
       images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
       cta: {
                 label: "Lire ici",
-                href: "assets/pulsar_web_compressed.pdf",
+                href: "assets/pulsar_web-comp.pdf",
               },
       hidden: false
     },
