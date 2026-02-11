@@ -196,7 +196,7 @@ window.PORTFOLIO_V3 = {
       images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
       cta: {
         label: "Lire ici",
-        href: "assets/pulsar_web_compressed.pdf"
+        href: "assets/pulsar_web-comp.pdf"
       },
       hidden: false
     },
