@@ -54,7 +54,7 @@ const CUSTOM_PAGES = {
   "À propos": {
     title: "À propos",
     meta: "",
-    images: [assets/images/autoportrait/asap.jpg],
+    images: ["assets/images/autoportrait/asap.jpg"],
     html: (DATA.sections.find(s => s.id === "about")?.content?.html) || ""
   },
 
