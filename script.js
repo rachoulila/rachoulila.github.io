@@ -48,9 +48,7 @@ const CUSTOM_PAGES = {
   "CV": {
     title: "CV",
     meta: "",
-    // ✅ placeholder : tu peux le remplacer plus tard par ton vrai visuel
-    // Mets un fichier ici : assets/images/pages/cv.jpg
-    images: ["assets/images/pages/cv.jpg"],
+    images: ["assets/images/CV 2026.jpg"],
     html: `
       <div class="muted">Consulter mon CV en PDF.</div>
     `,
