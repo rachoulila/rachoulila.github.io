@@ -58,10 +58,40 @@ window.PORTFOLIO_V3 = {
       hidden: false
     },
 
-    "Hazymetry": { title: "Hazymetry", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Holynyphea": { title: "Holynyphea", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Breakin Nailz": { title: "Breakin Nailz", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Nandor": { title: "Nandor", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Hazymetry":{
+      title: "Hazymetry",
+      meta: "",
+      description: "Typographie, Logo, et assets réseaux sociaux pour le groupe Hazymetry.",
+      images: ["assets/images/Haze/IMG_1999.jpeg", "assets/images/Haze/Sans titre-24.jpg"],
+      cta: {
+        label: "Découvrir",
+        href: "https://www.instagram.com/hazymetry/"
+      },
+      hidden: true },
+    
+    "Holynymphea":
+    { title: "Holynyphea",
+     meta: "",
+     description: "",
+     images: [],
+     cta: null,
+     hidden: true },
+    
+    "Breakin Nailz":
+    { title: "Breakin Nailz",
+     meta: "",
+     description: "",
+     images: [],
+     cta: null,
+     hidden: true },
+    
+    "Nandor":
+    { title: "Nandor",
+     meta: "",
+     description: "Identité pour le DJ Nandor. <br> Un projet du <a href="#" class="uLink" onclick="openCustomPage('Studio Rëva'); return false;">Studio Rëva</a>.",
+     images: [],
+     cta: null,
+     hidden: false },
 
     // --- Communication ---
     "Summer et Zima": {
