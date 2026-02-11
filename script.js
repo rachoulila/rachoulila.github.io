@@ -69,7 +69,10 @@ const CUSTOM_PAGES = {
     html: `
       <div class="muted">Ajoutez ici un lien vers votre CV (PDF) dès qu'il est prêt.</div>
     `,
-    cta: null
+  cta: {
+    label: "Ouvrir le CV",
+    href: "assets/CV 2026 2.pdf"
+  }
   },
   "Compétences techniques": {
     title: "Compétences techniques",
@@ -213,14 +216,13 @@ function buildMenu(){
   makeSectionTitle("");
   makeDivider();
 
-  makeBtn("Nom", () => openCustomPage("Nom"));
   makeBtn("Contact", () => openCustomPage("Contact"));
   makeBtn("CV", () => openCustomPage("CV"));
 
   makeDivider();
   makeSectionTitle("// Stratégie & impact");
   [
-    "S’exposer",
+    "Sexposer",
     "La Ruche",
   ].forEach(k => makeBtn(k, () => openProjectFromLabel(k)));
 
