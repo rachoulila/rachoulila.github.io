@@ -54,7 +54,7 @@ const CUSTOM_PAGES = {
   "À propos": {
     title: "À propos",
     meta: "",
-    images: [],
+    images: [assets/images/autoportrait/asap.jpg],
     html: (DATA.sections.find(s => s.id === "about")?.content?.html) || ""
   },
 
@@ -194,27 +194,27 @@ function buildMenu(){
 
   makeDivider();
   makeSectionTitle("// Branding");
-  ["Polygone", "Hazymetry", "Holynymphea", "Breakin Nailz", "Nandor"].forEach(k => addProjectBtn(makeBtn, k));
+  ["Polygone", "Nandor"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Communication");
-  ["Summer et Zima", "JPO", "Encore", "Nandor j’adore saison 2", "Etheral"].forEach(k => addProjectBtn(makeBtn, k));
+  ["Summer et Zima", "JPO", "Nandor j’adore saison 2"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Digital & expérience interactives");
-  ["11:11", "Anome", "Morph", "Antipathie", "Commandes 3D"].forEach(k => addProjectBtn(makeBtn, k));
+  ["11:11", "Anome", "Morph", "Antipathie"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Recherches & édition");
-  ["pulsar", "Sexposé", "Pornwashing", "Le plein écran peut il remplacer le plein air ?"].forEach(k => addProjectBtn(makeBtn, k));
+  ["Pulsar", "Sexposé", "Pornwashing"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Évènements & médiation");
-  ["Longueur d’onde", "Salon du chocolat", "La collectiv’", "Mission Matilda", "Poster goûter"].forEach(k => addProjectBtn(makeBtn, k));
+  ["Mission Matilda", "Poster goûter", "Salon du chocolat", "La collectiv’"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Expérimentations");
-  ["Couleurs et matières", "Textuellement transmissibles", "Encre thermo sensibles"].forEach(k => addProjectBtn(makeBtn, k));
+  ["Textuellement transmissibles"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("Bas de page");
