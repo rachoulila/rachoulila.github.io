@@ -12,7 +12,7 @@ const siteName = document.getElementById("siteName");
 const siteRoles = document.getElementById("siteRoles");
 const emailLink = document.getElementById("emailLink");
 
-// --- Custom pages (non-project pages) ---
+// --- Custom pages ---
 const CUSTOM_PAGES = {
   "Contact": {
     title: "Contact",
@@ -21,18 +21,15 @@ const CUSTOM_PAGES = {
     html: `
       <div class="about">
         <div class="muted">Vous pouvez me contacter ici :</div>
-
         <div style="margin-top:12px;">
           <div class="about__row">
             <span>Mail</span>
-            <a class="uLink" href="mailto:${DATA?.site?.email || ""}">${DATA?.site?.email || ""}</a>
+            <a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a>
           </div>
-
           <div class="about__row">
             <span>Téléphone</span>
             <a class="uLink" href="tel:+33651880125">+33 6 51 88 01 25</a>
           </div>
-
           <div class="about__row">
             <span>Instagram</span>
             <a class="uLink"
@@ -54,6 +51,13 @@ const CUSTOM_PAGES = {
     cta: { label: "Ouvrir le CV", href: "assets/CV 2026 2.pdf" }
   },
 
+  "À propos": {
+    title: "À propos",
+    meta: "",
+    images: [],
+    html: (DATA.sections.find(s => s.id === "about")?.content?.html) || ""
+  },
+
   "Compétences techniques": {
     title: "Compétences techniques",
     meta: "",
@@ -68,8 +72,7 @@ const CUSTOM_PAGES = {
   },
 
   "Studio Rëva": { title: "Studio Rëva", meta: "", images: [], html: `<div class="muted">Page studio (à compléter).</div>` },
-  "Musique": { title: "Musique", meta: "", images: [], html: `<div class="muted">Sélection de projets / collaborations musique (à compléter).</div>` },
-  "À propos": { title: "À propos", meta: "", images: [], html: (DATA?.sections?.find(s => s.id === "about")?.content?.html) || "" }
+  "Musique": { title: "Musique", meta: "", images: [], html: `<div class="muted">Sélection de projets / collaborations musique (à compléter).</div>` }
 };
 
 function setActive(btn){
@@ -115,7 +118,7 @@ function renderInfo({title, meta, description, cta, html}){
 }
 
 function openProject(key){
-  const p = DATA?.projects?.[key];
+  const p = DATA.projects?.[key];
   if(!p){
     renderFeed([]);
     renderInfo({title: key, meta: "", description: "Projet introuvable."});
@@ -136,16 +139,15 @@ function openCustomPage(key){
   renderInfo({title: p.title || key, meta: p.meta || "", html: p.html || p.description || "", cta: p.cta || null});
 }
 
-// Enable internal links from descriptions (e.g., Studio Rëva)
+// internal links from descriptions
 window.openCustomPage = openCustomPage;
 
 function scrollToTop(){
   document.querySelector(".center")?.scrollTo({top:0, behavior:"smooth"});
 }
 
-// helper: add a project button only if it exists and isn't hidden
 function addProjectBtn(makeBtn, label){
-  const p = DATA?.projects?.[label];
+  const p = DATA.projects?.[label];
   if(!p) return;
   if(p.hidden === true) return; // ✅ hide hidden projects from menu
   makeBtn(label, () => openProject(label));
@@ -179,7 +181,7 @@ function buildMenu(){
     return btn;
   };
 
-  // --- Top (under name/roles) ---
+  // top
   makeSectionTitle("");
   makeDivider();
   makeBtn("Contact", () => openCustomPage("Contact"));
@@ -187,7 +189,7 @@ function buildMenu(){
 
   makeDivider();
   makeSectionTitle("// Stratégie & impact");
-  // ✅ order: Sexposer first, then La Ruche. (S'exposer removed)
+  // ✅ Sexposer first, then La Ruche (no S'exposer)
   ["Sexposer", "La Ruche"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
@@ -228,7 +230,6 @@ function buildMenu(){
   scrollBtn.addEventListener("click", () => scrollToTop());
   menuEl.appendChild(scrollBtn);
 
-  // Default open: Contact
   const firstBtn = document.querySelector(".menu__item");
   if(firstBtn){
     firstBtn.classList.add("is-active");
@@ -238,20 +239,15 @@ function buildMenu(){
 
 function init(){
   if(!DATA){
-    if(infoTitle) infoTitle.textContent = "Erreur";
-    if(infoDesc) infoDesc.textContent = "data.js n'a pas chargé.";
-    return;
-  }
-
-  if(!menuEl || !galleryEl || !infoTitle || !infoMeta || !infoDesc || !infoCta){
-    console.error("UI manquante: vérifie les ids menu/gallery/infoTitle/infoMeta/infoDesc/infoCta dans index.html");
+    infoTitle.textContent = "Erreur";
+    infoDesc.textContent = "data.js n'a pas chargé.";
     return;
   }
 
   if(siteName) siteName.textContent = DATA.site?.name || "";
   if(siteRoles) siteRoles.innerHTML = (DATA.site?.roles || []).join("<br/>");
 
-  // keep email out of global UI (email remains in Contact page)
+  // keep email out of global UI
   if(emailLink){
     emailLink.textContent = "";
     emailLink.removeAttribute("href");
