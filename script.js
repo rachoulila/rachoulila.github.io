@@ -1,11 +1,6 @@
 /* global PORTFOLIO */
 const DATA = window.PORTFOLIO_V3;
 
-// Guard: if data.js didn't load, don't crash silently
-if(!DATA){
-  console.error("PORTFOLIO_V3 not found. Check that data.js is loaded before script.js.");
-}
-
 const menuEl = document.getElementById("menu");
 const galleryEl = document.getElementById("gallery");
 const infoTitle = document.getElementById("infoTitle");
@@ -54,15 +49,9 @@ const CUSTOM_PAGES = {
   "CV": {
     title: "CV",
     meta: "",
-    // Preview image (safe). Replace anytime.
     images: ["assets/images/pages/cv.jpg"],
-    html: `
-      <div class="muted">Consulter mon CV en PDF.</div>
-    `,
-    cta: {
-      label: "Ouvrir le CV",
-      href: "assets/CV 2026 2.pdf"
-    }
+    html: `<div class="muted">Consulter mon CV en PDF.</div>`,
+    cta: { label: "Ouvrir le CV", href: "assets/CV 2026 2.pdf" }
   },
 
   "Compétences techniques": {
@@ -78,26 +67,9 @@ const CUSTOM_PAGES = {
     `
   },
 
-  "Studio Rëva": {
-    title: "Studio Rëva",
-    meta: "",
-    images: [],
-    html: `<div class="muted">Page studio (à compléter).</div>`
-  },
-
-  "Musique": {
-    title: "Musique",
-    meta: "",
-    images: [],
-    html: `<div class="muted">Sélection de projets / collaborations musique (à compléter).</div>`
-  },
-
-  "À propos": {
-    title: "À propos",
-    meta: "",
-    images: [],
-    html: (DATA?.sections?.find(s => s.id === "about")?.content?.html) || ""
-  }
+  "Studio Rëva": { title: "Studio Rëva", meta: "", images: [], html: `<div class="muted">Page studio (à compléter).</div>` },
+  "Musique": { title: "Musique", meta: "", images: [], html: `<div class="muted">Sélection de projets / collaborations musique (à compléter).</div>` },
+  "À propos": { title: "À propos", meta: "", images: [], html: (DATA?.sections?.find(s => s.id === "about")?.content?.html) || "" }
 };
 
 function setActive(btn){
@@ -164,11 +136,19 @@ function openCustomPage(key){
   renderInfo({title: p.title || key, meta: p.meta || "", html: p.html || p.description || "", cta: p.cta || null});
 }
 
-// Make internal links work from project descriptions
+// Enable internal links from descriptions (e.g., Studio Rëva)
 window.openCustomPage = openCustomPage;
 
 function scrollToTop(){
   document.querySelector(".center")?.scrollTo({top:0, behavior:"smooth"});
+}
+
+// helper: add a project button only if it exists and isn't hidden
+function addProjectBtn(makeBtn, label){
+  const p = DATA?.projects?.[label];
+  if(!p) return;
+  if(p.hidden === true) return; // ✅ hide hidden projects from menu
+  makeBtn(label, () => openProject(label));
 }
 
 function buildMenu(){
@@ -207,31 +187,32 @@ function buildMenu(){
 
   makeDivider();
   makeSectionTitle("// Stratégie & impact");
-  ["S’exposer", "La Ruche", "Sexposer"].forEach(k => makeBtn(k, () => openProject(k)));
+  // ✅ order: Sexposer first, then La Ruche. (S'exposer removed)
+  ["Sexposer", "La Ruche"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Branding");
-  ["Polygone", "Hazymetry", "Holynymphea", "Breakin Nailz", "Nandor"].forEach(k => makeBtn(k, () => openProject(k)));
+  ["Polygone", "Hazymetry", "Holynymphea", "Breakin Nailz", "Nandor"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Communication");
-  ["Summer et Zima", "JPO", "Encore", "Nandor j’adore saison 2", "Etheral"].forEach(k => makeBtn(k, () => openProject(k)));
+  ["Summer et Zima", "JPO", "Encore", "Nandor j’adore saison 2", "Etheral"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Digital & expérience interactives");
-  ["11:11", "Anome", "Morph", "Antipathie", "Commandes 3D"].forEach(k => makeBtn(k, () => openProject(k)));
+  ["11:11", "Anome", "Morph", "Antipathie", "Commandes 3D"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Recherches & édition");
-  ["pulsar", "Sexposé", "Pornwashing", "Le plein écran peut il remplacer le plein air ?"].forEach(k => makeBtn(k, () => openProject(k)));
+  ["pulsar", "Sexposé", "Pornwashing", "Le plein écran peut il remplacer le plein air ?"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Évènements & médiation");
-  ["Longueur d’onde", "Salon du chocolat", "La collectiv’", "Mission Matilda", "Poster goûter"].forEach(k => makeBtn(k, () => openProject(k)));
+  ["Longueur d’onde", "Salon du chocolat", "La collectiv’", "Mission Matilda", "Poster goûter"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("// Expérimentations");
-  ["Couleurs et matières", "Textuellement transmissibles", "Encre thermo sensibles"].forEach(k => makeBtn(k, () => openProject(k)));
+  ["Couleurs et matières", "Textuellement transmissibles", "Encre thermo sensibles"].forEach(k => addProjectBtn(makeBtn, k));
 
   makeDivider();
   makeSectionTitle("Bas de page");
@@ -257,21 +238,20 @@ function buildMenu(){
 
 function init(){
   if(!DATA){
-    // show minimal message
     if(infoTitle) infoTitle.textContent = "Erreur";
     if(infoDesc) infoDesc.textContent = "data.js n'a pas chargé.";
     return;
   }
 
   if(!menuEl || !galleryEl || !infoTitle || !infoMeta || !infoDesc || !infoCta){
-    console.error("UI missing: check ids in index.html");
+    console.error("UI manquante: vérifie les ids menu/gallery/infoTitle/infoMeta/infoDesc/infoCta dans index.html");
     return;
   }
 
   if(siteName) siteName.textContent = DATA.site?.name || "";
   if(siteRoles) siteRoles.innerHTML = (DATA.site?.roles || []).join("<br/>");
 
-  // Hide global footer email (email stays in Contact/About pages)
+  // keep email out of global UI (email remains in Contact page)
   if(emailLink){
     emailLink.textContent = "";
     emailLink.removeAttribute("href");
