@@ -290,7 +290,8 @@ function buildMenu(){
 function init(){
   siteName.textContent = DATA.site.name;
   siteRoles.innerHTML = (DATA.site.roles || []).join("<br/>");
-
+  emailLink.textContent = DATA.site.email;
+emailLink.href = "mailto:" + DATA.site.email;
   buildMenu();
 }
 init();
