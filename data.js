@@ -29,9 +29,9 @@ window.PORTFOLIO_V3 = {
     // --- Stratégie & impact ---
     "Sexposer": {
       title: "Sexposer",
-      meta: "Projet de diplôme de DN Made.",
-      description: "Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
-      images: ["assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
+      meta: "",
+      description: "Projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
+      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
       cta: null,
       hidden: false
     },
@@ -39,7 +39,7 @@ window.PORTFOLIO_V3 = {
     "La Ruche": {
       title: "La Ruche",
       meta: "",
-      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.<br> Projet réalisé avec Andréa Terroso.",
+      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
       images: ["assets/images/vitality/vitality-01.jpg", "assets/images/vitality/vitality-02.jpg"],
       cta: {
         label: "En savoir plus",
@@ -58,7 +58,7 @@ window.PORTFOLIO_V3 = {
       hidden: false
     },
 
-    "Hazymetry":{
+    "Hazymetry": {
       title: "Hazymetry",
       meta: "",
       description: "Typographie, Logo, et assets réseaux sociaux pour le groupe Hazymetry.",
@@ -67,31 +67,35 @@ window.PORTFOLIO_V3 = {
         label: "Découvrir",
         href: "https://www.instagram.com/hazymetry/"
       },
-      hidden: true },
-    
-    "Holynymphea":
-    { title: "Holynyphea",
-     meta: "",
-     description: "",
-     images: [],
-     cta: null,
-     hidden: true },
-    
-    "Breakin Nailz":
-    { title: "Breakin Nailz",
-     meta: "",
-     description: "",
-     images: [],
-     cta: null,
-     hidden: true },
-    
-    "Nandor":
-    { title: "Nandor",
-     meta: "",
-     description: "Identité pour le DJ Nandor. <br> Un projet du <a href="#" class="uLink" onclick="openCustomPage('Studio Rëva'); return false;">Studio Rëva</a>.",
-     images: [],
-     cta: null,
-     hidden: false },
+      hidden: true
+    },
+
+    "Holynymphea": {
+      title: "Holynymphea",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "Breakin Nailz": {
+      title: "Breakin Nailz",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "Nandor": {
+      title: "Nandor",
+      meta: "",
+      description: "Identité pour le DJ Nandor. <br>Un projet du <a href=\"#\" class=\"uLink\" onclick=\"openCustomPage('Studio Rëva'); return false;\">Studio Rëva</a>.",
+      images: [],
+      cta: null,
+      hidden: false
+    },
 
     // --- Communication ---
     "Summer et Zima": {
@@ -112,9 +116,32 @@ window.PORTFOLIO_V3 = {
       hidden: false
     },
 
-    "Encore": { title: "Encore", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Nandor j’adore saison 2": { title: "Nandor j’adore saison 2", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Etheral": { title: "Etheral", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Encore": {
+      title: "Encore",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "Nandor j’adore saison 2": {
+      title: "Nandor j’adore saison 2",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "Etheral": {
+      title: "Etheral",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
 
     // --- Digital & expérience interactives ---
     "11:11": {
@@ -153,7 +180,14 @@ window.PORTFOLIO_V3 = {
       hidden: false
     },
 
-    "Commandes 3D": { title: "Commandes 3D", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Commandes 3D": {
+      title: "Commandes 3D",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
 
     // --- Recherches & édition ---
     "pulsar": {
@@ -161,7 +195,10 @@ window.PORTFOLIO_V3 = {
       meta: "",
       description: "Pulsar : plongée en sonocène digicore. Mémoire de DSAA. Analyses des expériences musicales adressées à des individus hyper connectés. Écriture et conception graphique.",
       images: ["assets/images/pulsar/thesis-01.jpg", "assets/images/pulsar/thesis-02.jpg"],
-      cta: { label: "Lire ici", href: "assets/pulsar_web_compressed.pdf" },
+      cta: {
+        label: "Lire ici",
+        href: "assets/pulsar_web_compressed.pdf"
+      },
       hidden: false
     },
 
@@ -170,16 +207,18 @@ window.PORTFOLIO_V3 = {
       meta: "",
       description: "Étude de cas sous la forme d'un site internet, analyse de la campagne dirtiest porn ever de Pornhub.",
       images: ["assets/images/pornwashing/pornwashing-01.jpg", "assets/images/pornwashing/pornwashing-02.jpg"],
-      cta: { label: "Consulter ici", href: "pornwashing/index.html" },
+      cta: {
+        label: "Consulter ici",
+        href: "pornwashing/index.html"
+      },
       hidden: false
     },
 
-    // Sexposer
-    "Sexposer": {
-      title: "Sexposer",
-      meta: "Projet de diplôme de DN Made.",
-      description: "Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
-      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
+    "Sexposé": {
+      title: "Sexposé",
+      meta: "Mémoire de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique.",
+      description: "",
+      images: ["assets/images/sexpo1/Test.jpg"],
       cta: null,
       hidden: false
     },
@@ -194,9 +233,32 @@ window.PORTFOLIO_V3 = {
     },
 
     // --- Évènements & médiation ---
-    "Longueur d’onde": { title: "Longueur d’onde", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Salon du chocolat": { title: "Salon du chocolat", meta: "", description: "", images: [], cta: null, hidden: false },
-    "La collectiv’": { title: "La collectiv’", meta: "", description: "", images: [], cta: null, hidden: false },
+    "Longueur d’onde": {
+      title: "Longueur d’onde",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "Salon du chocolat": {
+      title: "Salon du chocolat",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "La collectiv’": {
+      title: "La collectiv’",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
 
     "Mission Matilda": {
       title: "Mission Matilda",
@@ -217,8 +279,31 @@ window.PORTFOLIO_V3 = {
     },
 
     // --- Expérimentations ---
-    "Couleurs et matières": { title: "Couleurs et matières", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Textuellement transmissibles": { title: "Textuellement transmissibles", meta: "", description: "", images: [], cta: null, hidden: false },
-    "Encre thermo sensibles": { title: "Encre thermo sensibles", meta: "", description: "", images: [], cta: null, hidden: false }
+    "Couleurs et matières": {
+      title: "Couleurs et matières",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "Textuellement transmissibles": {
+      title: "Textuellement transmissibles",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    },
+
+    "Encre thermo sensibles": {
+      title: "Encre thermo sensibles",
+      meta: "",
+      description: "",
+      images: [],
+      cta: null,
+      hidden: false
+    }
   }
 };
