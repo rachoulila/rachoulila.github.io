@@ -13,7 +13,7 @@ const siteRoles = document.getElementById("siteRoles");
 
 // --- Custom pages (fallback when a menu item isn't a project) ---
 const CUSTOM_PAGES = {
-  "Nom": {
+  "": {
     title: DATA.site.name,
     meta: (DATA.site.roles || []).join(" · "),
     html: `
@@ -28,24 +28,44 @@ const CUSTOM_PAGES = {
       </div>
     `
   },
-  "Contact": {
-    title: "Contact",
-    meta: "",
-    html: `
-      <div class="about">
-        <div class="muted">Vous pouvez me contacter ici :</div>
-        <div style="margin-top:12px;">
-          <div class="about__row">
-            <span>Mail</span>
-            <a class="uLink" href="mailto:${DATA.site.email}">${DATA.site.email}</a>
-          </div>
+"Contact": {
+  title: "Contact",
+  meta: "",
+  html: `
+    <div class="about">
+      <div class="muted">Vous pouvez me contacter ici :</div>
+
+      <div style="margin-top:12px;">
+        <div class="about__row">
+          <span>Mail</span>
+          <a class="uLink" href="mailto:${DATA.site.email}">
+            ${DATA.site.email}
+          </a>
+        </div>
+
+        <div class="about__row">
+          <span>Téléphone</span>
+          <a class="uLink" href="tel:+33651880125">
+            +33 6 51 88 01 25
+          </a>
+        </div>
+
+        <div class="about__row">
+          <span>Instagram</span>
+          <a class="uLink" href="https://www.instagram.com/rachel.truchot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            @rachel.truchot
+          </a>
         </div>
       </div>
-    `
-  },
+    </div>
+  `
+},
   "CV": {
     title: "CV",
     meta: "",
+      images: [
+    "assets/CV 2026 2.pdf"
+  ],
     html: `
       <div class="muted">Ajoutez ici un lien vers votre CV (PDF) dès qu'il est prêt.</div>
     `,
@@ -142,8 +162,14 @@ function openCustomPage(key){
     renderInfo({title: key, meta: "", description: "Contenu à venir."});
     return;
   }
-  renderFeed([]);
-  renderInfo({title: p.title || key, meta: p.meta || "", html: p.html || p.description || "", cta: p.cta || null});
+  renderFeed(p.images || []);
+
+  renderInfo({
+    title: p.title || key,
+    meta: p.meta || "",
+    html: p.html || p.description || "",
+    cta: p.cta || null
+  });
 }
 
 function openProjectFromLabel(label){
@@ -187,7 +213,6 @@ function buildMenu(){
   makeSectionTitle("");
   makeDivider();
 
-  // ✅ Tu voulais Nom / Contact / CV en haut
   makeBtn("Nom", () => openCustomPage("Nom"));
   makeBtn("Contact", () => openCustomPage("Contact"));
   makeBtn("CV", () => openCustomPage("CV"));
