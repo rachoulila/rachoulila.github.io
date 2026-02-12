@@ -30,17 +30,16 @@ window.PORTFOLIO_V3 = {
     // --- Stratégie & impact ---
     "Sexposer": {
       title: "Sexposer",
-      meta: "",
       description: "Conception d’un dispositif de communication destiné aux 15–24 ans pour informer et encourager le dépistage des IST via une nouvelle branche de Santé publique France centrée sur un podcast et une campagne multicanale. <br> Le projet développe une identité visuelle et des campagnes mêlant humour, sensualité implicite et ton rassurant afin de libérer la parole autour de la santé sexuelle sans stigmatiser. <br> Projet issu d’un travail de recherche sur la communication autour des IST auprès des lycéens, nourri par des entretiens avec des professionnels de la santé et de la communication.",
-      skills: "Stratégie · Identité visuelle · Campagnes réseaux & print · Conception éditoriale · Photographie",
-      images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
+      meta: "Stratégie · Identité visuelle · Campagnes réseaux & print · Conception éditoriale · Photographie",
+      images: ["assets/images/sexpo2/clean1.png", "assets/images/sexpo2/clean2.png", "assets/images/sexpo2/mosaique.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
       cta: null,
       hidden: false
     },
     "La Ruche": {
       title: "La Ruche",
-      meta: "",
-      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? C'est la question à laquelle nous avons essayer de répondre.",
+      description: "Comment recréer des liens solides entre les fans et les reconnecter au monde réel ? <br> Concept d’écosystème communautaire imaginé pour Vitality afin de reconnecter les fans d’e-sport grâce à une carte d’événements et de quêtes locales accessibles via QR code.<br> Le projet propose des expériences hybrides mêlant rencontres physiques et récompenses digitales pour renforcer les liens entre communautés locales et équipe e-sport.",
+      meta: "stratégie d’expérience · concept événementiel · activation de marque · UX parcours communautaire",
       images: ["assets/images/vitality/vitality-01.jpg", "assets/images/vitality/vitality-02.jpg"],
       cta: {
                 label: "En savoir plus",
@@ -52,8 +51,8 @@ window.PORTFOLIO_V3 = {
     // --- Branding ---
     "Polygone": {
       title: "Polygone",
-      meta: "",
-      description: "Identité visuelle de l’association Le Polygone. Direction artistique et réalisation de Merch lors d’évênements.",
+      description: "Création de l’identité visuelle de l’association Le Polygone en 2023, puis rebranding et développement d’une charte graphique en 2026. <br> Direction artistique et réalisation de merch depuis 2023.",
+      meta: "identité visuelle · direction artistique · conception éditoriale · merchandising · supports événementiels",
       images: ["assets/images/polygone.1/STUD_NEW_LED-34.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
       cta: null,
       hidden: false
@@ -61,7 +60,7 @@ window.PORTFOLIO_V3 = {
     "Nandor": {
       title: "Nandor",
       meta: "",
-      description: "",
+      description: "Conception de l’identité visuelle du DJ Nandor. <br> Réalisée en binôme au sein du studio Rëva.",
       images: [],
       cta: null,
       hidden: false
