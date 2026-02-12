@@ -31,7 +31,8 @@ window.PORTFOLIO_V3 = {
     "Sexposer": {
       title: "Sexposer",
       meta: "",
-      description: "Projet de diplôme de DN Made. Analyse de la communication autour des IST chez les jeunes. Écriture, photographie et Conception Graphique. Lancement du dispositif Sexposer, une ressource disponible sur les réseaux sociaux, le web et les plateformes de streaming. À destination des 15-25 ans.",
+      description: "Conception d’un dispositif de communication destiné aux 15–24 ans pour informer et encourager le dépistage des IST via une nouvelle branche de Santé publique France centrée sur un podcast et une campagne multicanale. <br> Le projet développe une identité visuelle et des campagnes mêlant humour, sensualité implicite et ton rassurant afin de libérer la parole autour de la santé sexuelle sans stigmatiser. <br> Projet issu d’un travail de recherche sur la communication autour des IST auprès des lycéens, nourri par des entretiens avec des professionnels de la santé et de la communication.",
+      skills: "Stratégie · Identité visuelle · Campagnes réseaux & print · Conception éditoriale · Photographie",
       images: ["assets/images/sexpo1/Test.jpg", "assets/images/sexpo2/Capture d’écran 2025-06-26 à 22.57.19.png"],
       cta: null,
       hidden: false
