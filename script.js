@@ -20,7 +20,7 @@ const CUSTOM_PAGES = {
     images: [],
     html: `
       <div class="about">
-        <div class="muted">Vous pouvez me contacter ici :</div>
+        <div class="muted"></div>
         <div style="margin-top:12px;">
           <div class="about__row">
             <span>Mail</span>
@@ -46,7 +46,7 @@ const CUSTOM_PAGES = {
   "CV": {
     title: "CV",
     meta: "",
-    images: ["assets/images/pages/cv.jpg"],
+    images: ["assets/images/CV_2026.jpg"],
     html: `<div class="muted">Consulter mon CV en PDF.</div>`,
     cta: { label: "Ouvrir le CV", href: "assets/CV 2026 2.pdf" }
   },
