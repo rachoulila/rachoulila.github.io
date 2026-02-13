@@ -53,7 +53,7 @@ window.PORTFOLIO_V3 = {
       title: "Polygone",
       description: "Création de l’identité visuelle de l’association Le Polygone en 2023, puis rebranding et développement d’une charte graphique en 2026. <br> Direction artistique et réalisation de merch depuis 2023.",
       meta: "identité visuelle · direction artistique · conception éditoriale · merchandising · supports événementiels",
-      images: ["assets/images/polygone.1/STUD_NEW_LED-04.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
+      images: ["assets/images/polygone.1/stud.jpg", "assets/images/polygone.1/02-NEW-CHARTE-Maeva7.jpg"],
       cta: null,
       hidden: false
     },
