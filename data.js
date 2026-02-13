@@ -61,7 +61,7 @@ window.PORTFOLIO_V3 = {
       title: "Nandor",
       meta: "",
       description: "Conception de l’identité visuelle du DJ Nandor. <br> Réalisée en binôme au sein du studio Rëva.",
-      images: [],
+      images: ["assets/images/nandor/Rapido.jpg", "assets/images/nandor/logo.jpg"],
       cta: null,
       hidden: false
     },
