@@ -17,7 +17,7 @@ const CUSTOM_PAGES = {
   "Contact": {
     title: "Contact",
     meta: "",
-    images: [],
+    images: ["assets/images/hero-01.jpg"],
     html: `
       <div class="about">
         <div class="muted"></div>
